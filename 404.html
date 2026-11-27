@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page introuvable | Ouradigi</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/poppins-700.woff2) format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(/fonts/inter-latin.woff2) format('woff2'); }
+:root { --fond: #FFFFFF; --texte: #334155; --titre: #0B2545; --jaune: #FFB703; }
+@media (prefers-color-scheme: dark) { :root { --fond: #0B2545; --texte: #E6ECF5; --titre: #FFFFFF; } }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: var(--fond); color: var(--texte); font: 400 1rem/1.6 "Inter", system-ui, sans-serif; text-align: center; }
+.logo { font: 700 1.6rem/1 "Poppins", sans-serif; letter-spacing: .02em; }
+.oura { color: var(--titre); } .digi { color: var(--jaune); }
+h1 { font: 700 clamp(1.6rem, 5vw, 2.4rem)/1.2 "Poppins", sans-serif; color: var(--titre); margin: 28px 0 10px; }
+p { max-width: 34rem; margin: 0 auto 28px; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+a.btn { display: inline-flex; align-items: center; padding: 13px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; }
+.jaune { background: var(--jaune); color: #0B2545; }
+.contour { border: 2px solid currentColor; color: var(--titre); }
+a.btn:focus-visible { outline: 3px solid var(--jaune); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo"><span class="oura">OURA</span><span class="digi">DIGI</span></div>
+  <h1>Cette page n'existe pas</h1>
+  <p>Le lien est peut-être incomplet ou la page a été déplacée. Revenez à l'accueil ou écrivez-nous directement.</p>
+  <div class="btns">
+    <a class="btn jaune" href="/">Retour à l'accueil</a>
+    <a class="btn contour" href="https://wa.me/22898000493" target="_blank" rel="noopener noreferrer">Nous écrire sur WhatsApp</a>
+  </div>
+</main>
+</body>
+</html>

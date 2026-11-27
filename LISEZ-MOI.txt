@@ -1,0 +1,417 @@
+SITE OURADIGI : GUIDE D'ACCÈS ET DE MISE EN LIGNE
+==================================================
+Version du 27 novembre 2026 : audit complet, corrections et sécurité.
+
+
+0. CE QUI A ÉTÉ CORRIGÉ ET SÉCURISÉ (27/11/2026)
+------------------------------------------------
+Tout a été testé dans un vrai navigateur, sur téléphone (320, 360, 390 px),
+tablette (768 px) et ordinateur (1280 et 1920 px) : aucune erreur, aucun
+débordement sur le côté, tous les liens internes mènent à une rubrique
+existante, toutes les icônes s'affichent.
+
+Corrections
+  - Formulaire de devis : si le navigateur bloque l'ouverture d'un nouvel
+    onglet (fréquent sur iPhone), WhatsApp s'ouvre maintenant dans l'onglet
+    actuel au lieu de ne rien faire.
+  - Formulaire : un double clic n'ouvre plus deux fois WhatsApp. Le nom doit
+    faire au moins 2 lettres. Longueurs limitées (nom 80, entreprise 100,
+    besoin 1 000 caractères) pour éviter des liens trop longs que WhatsApp
+    refuse.
+  - Menu sur téléphone : se ferme avec la touche Échap ou en touchant
+    ailleurs sur la page. Le bouton annonce « Ouvrir / Fermer le menu » aux
+    lecteurs d'écran.
+  - Monnaie : le pays détecté est gardé 7 jours sur l'appareil du visiteur.
+    Avant, la recherche était refaite à chaque visite. Résultat : moins
+    d'appels aux services externes et des prix affichés tout de suite.
+    Si ces services sont en panne ou bloqués, le site reste en FCFA ou en
+    euros selon le fuseau horaire (testé).
+  - Vidéo : si le fichier vidéo est introuvable, la miniature et le bouton
+    restent affichés (plus d'écran noir).
+  - Défilement plus fluide sur téléphone (barre de progression et menu
+    actif calculés une seule fois par image).
+  - Pied de page : liens plus faciles à toucher au doigt, contour visible
+    au clavier sur tous les liens (accessibilité).
+  - Portraits des avis chargés seulement quand ils approchent de l'écran.
+  - Nouvelle page « Page introuvable » (404.html) aux couleurs d'Ouradigi,
+    avec retour à l'accueil et bouton WhatsApp.
+
+Sécurité
+  - vercel.json (Vercel) et .htaccess (LWS) ajoutent les protections
+    suivantes à chaque page :
+      * Content-Security-Policy : le navigateur refuse tout script qui ne
+        vient pas du site lui-même. C'est la protection principale contre
+        l'injection de code (XSS).
+      * X-Frame-Options et frame-ancestors : personne ne peut afficher votre
+        site dans une autre page pour piéger les visiteurs (clickjacking).
+      * Strict-Transport-Security (HSTS) : toujours en https, cadenas forcé.
+      * X-Content-Type-Options, Referrer-Policy, Permissions-Policy (caméra,
+        micro, position, paiement désactivés), Cross-Origin-Opener-Policy.
+  - Le code JavaScript a été sorti de la page dans js/theme.js et
+    js/main.js, ce qui permet cette politique stricte.
+  - Polices Poppins et Inter maintenant hébergées sur le site (dossier
+    fonts/) : plus aucun appel à Google, plus rapide, et rien n'est envoyé
+    à un tiers à l'ouverture de la page.
+  - Tous les liens externes ont rel="noopener noreferrer" : le site ouvert
+    ne peut pas prendre le contrôle de votre onglet.
+  - Formulaire : rien n'est envoyé à un serveur et rien n'est stocké. Les
+    textes sont nettoyés (caractères invisibles ou trompeurs retirés) puis
+    encodés dans le lien WhatsApp. Ils ne sont jamais réinjectés dans la
+    page : un visiteur ne peut pas y glisser de code (testé avec
+    <script>alert(1)</script>).
+  - Le code pays reçu des services externes est vérifié (2 lettres
+    seulement) avant d'être utilisé. Ces appels partent sans cookie et sans
+    l'adresse de la page.
+  - Aucune clé, aucun mot de passe, aucune donnée sensible dans le code
+    (vérifié).
+  - .well-known/security.txt : indique où signaler une faille
+    (dg.ouradigi@gmail.com).
+
+Ce qui reste de votre côté pour la sécurité
+  - Activez la double authentification (2FA) sur GitHub, Vercel, LWS et
+    sur l'adresse Gmail dg.ouradigi@gmail.com. C'est par ces comptes qu'un
+    pirate passerait, pas par le site lui-même.
+  - N'ajoutez jamais de clé d'API ou de mot de passe dans les fichiers du
+    site : ils sont publics.
+  - Le dépôt GitHub peut rester public ou être passé en privé
+    (Settings > General > Danger Zone > Change visibility) : Vercel
+    fonctionne dans les deux cas.
+
+
+0 bis. METTRE À JOUR LE SITE SUR GITHUB + VERCEL (pas à pas)
+-----------------------------------------------------------
+Le site ouradigi.vercel.app se met à jour tout seul dès que les fichiers
+changent sur GitHub (dépôt remieliakakpo/Ouradigi).
+
+  1. Décompressez ouradigi-site.zip sur votre ordinateur.
+  2. Ouvrez https://github.com/remieliakakpo/Ouradigi et connectez-vous.
+  3. Cliquez « Add file » > « Upload files ».
+  4. Ouvrez le dossier ouradigi-site, sélectionnez TOUT son contenu
+     (Ctrl + A) et glissez-le dans la page GitHub : index.html, 404.html,
+     vercel.json, les dossiers js, fonts et images, et les autres fichiers.
+     Les fichiers doivent arriver à la racine du dépôt (pas dans un
+     sous-dossier « ouradigi-site »). Les fichiers de même nom sont remplacés.
+  5. Les fichiers .htaccess et le dossier .well-known commencent par un
+     point : Windows et Mac les cachent parfois. Ils ne sont pas
+     indispensables sur Vercel (.htaccess sert seulement pour LWS). Pour
+     envoyer .well-known : « Add file » > « Create new file », tapez
+     .well-known/security.txt comme nom, et collez le contenu du fichier.
+  6. En bas, écrivez « Audit et sécurité du site » et cliquez
+     « Commit changes ».
+  7. Attendez 1 à 2 minutes. Sur https://vercel.com, le projet affiche
+     « Ready » (vert). Ouvrez https://ouradigi.vercel.app et faites
+     Ctrl + F5 (ou videz le cache sur téléphone).
+  8. Vérifiez :
+     - le site s'affiche avec les bonnes polices et les animations ;
+     - le formulaire ouvre WhatsApp ;
+     - la vidéo se lance ;
+     - https://ouradigi.vercel.app/nimporte-quoi affiche la page 404 ;
+     - https://securityheaders.com : tapez l'adresse du site, la note
+       attendue est A ou A+.
+  Si quelque chose ne s'affiche plus après l'envoi (polices, script),
+  c'est presque toujours un dossier oublié (js ou fonts) : renvoyez-le.
+
+
+1. CONTENU DU DOSSIER
+---------------------
+ouradigi-site/
+  index.html     La page d'accueil complète (textes, couleurs, boutons).
+  js/main.js     Le fonctionnement (menu, monnaie, vidéo, formulaire WhatsApp).
+  js/theme.js    Le mode clair / sombre appliqué avant l'affichage.
+  fonts/         Les polices Poppins et Inter (hébergées sur le site).
+  404.html       La page « Page introuvable ».
+  vercel.json    Les protections de sécurité et le cache, pour Vercel.
+  .htaccess      Les mêmes protections, pour un hébergement LWS (Apache).
+  .well-known/security.txt   Où signaler une faille de sécurité.
+  images/        Les captures des 4 réalisations (Essenam, Ellxewo, Novobat, ScholarFit).
+  images/avatars Les portraits illustrés des témoignages (avatar-1.svg à avatar-6.svg).
+  images/ouradigi-automatisation.mp4         La vidéo motion design (automatisation).
+  images/ouradigi-automatisation-poster.jpg  La miniature affichée avant le clic.
+  LISEZ-MOI.txt  Ce guide.
+
+  Fichiers pour Google et le partage (à laisser à côté de index.html) :
+  sitemap.xml            La liste des pages du site, pour Google.
+  robots.txt             Indique aux moteurs de recherche qu'ils peuvent tout lire.
+  favicon.ico / favicon.svg   La petite icône de l'onglet du navigateur.
+  apple-touch-icon.png, icon-192.png, icon-512.png, site.webmanifest
+                         Les icônes quand on ajoute le site à l'écran d'accueil.
+  images/ouradigi-partage.jpg   L'image qui s'affiche quand on partage le lien
+                         sur WhatsApp, Facebook, LinkedIn ou X.
+
+Gardez toujours index.html et les dossiers images/, js/ et fonts/ ensemble,
+au même endroit.
+
+
+2. VOIR LE SITE SUR VOTRE ORDINATEUR (sans internet pour l'hébergement)
+-----------------------------------------------------------------------
+1. Décompressez le fichier .zip (clic droit > « Extraire tout »).
+2. Ouvrez le dossier ouradigi-site.
+3. Double-cliquez sur index.html : le site s'ouvre dans votre navigateur
+   (Chrome, Edge, Firefox ou Safari).
+
+Les polices sont incluses : pas besoin d'internet pour les voir. La
+détection de la monnaie, elle, a besoin d'internet (sinon : fuseau horaire).
+
+
+3. CE QUI FONCTIONNE DANS LA PAGE
+---------------------------------
+- Bouton lune / soleil : passe du mode clair au mode sombre. Le choix est retenu.
+  Au premier passage, le site suit le réglage du téléphone ou de l'ordinateur.
+- Menu : chaque lien descend vers la bonne rubrique. Sur téléphone, le bouton
+  à trois traits ouvre le menu.
+- Tarifs : les prix s'affichent tout seuls dans la monnaie du visiteur
+  (voir partie 4 ci-dessous). Aucun sélecteur n'est visible sur le site.
+
+- « Demander un devis » : descend vers le formulaire. Les boutons placés sous
+  un service choisissent automatiquement ce service dans le formulaire.
+- Formulaire : en cliquant sur « Envoyer ma demande sur WhatsApp », WhatsApp
+  s'ouvre avec la demande déjà écrite, vers le +228 98 00 04 93.
+  Le client n'a plus qu'à appuyer sur Envoyer.
+- Vidéo « Automatisation » (avant Nos services) : la miniature « Vos journées
+  filent… 42 tâches en attente » s'affiche. Le bouton jaune « Regarder la
+  vidéo » la lance avec le son. Rien n'est téléchargé avant ce clic, et la
+  miniature revient à la fin de la vidéo.
+- Bouton vert WhatsApp en bas à droite : ouvre directement la discussion.
+- Bouton email : ouvre la messagerie vers dg.ouradigi@gmail.com.
+- Réalisations : chaque carte ouvre le site du client dans un nouvel onglet.
+- Offre « Analyse de données » (grande carte sous les 4 services, et carte
+  « Analyse de données » dans les Tarifs) : le bouton jaune « Demander une
+  analyse » ouvre WhatsApp vers le +228 98 00 04 93 avec ce message déjà
+  écrit : « Bonjour Ouradigi, je souhaite une analyse de mes données (audit +
+  tableau de bord). Mon activité : … Mes données sont dans : … ».
+  Le petit tableau de bord à droite de la carte est une illustration animée
+  (les chiffres sont des exemples). « Analyse de données » est aussi
+  disponible dans la liste « Service souhaité » du formulaire, et une
+  question lui est consacrée dans la FAQ.
+
+
+4. PRIX AFFICHÉS SELON LE PAYS DU VISITEUR
+------------------------------------------
+Le site n'affiche qu'une seule monnaie, choisie automatiquement :
+  - visiteur au Togo, Bénin, Burkina Faso, Côte d'Ivoire, Guinée-Bissau,
+    Mali, Niger ou Sénégal (zone UEMOA) : prix en francs CFA ;
+  - visiteur de tout autre pays : prix en euros.
+
+Comment ça marche :
+  1. Dès l'ouverture, la page devine la zone grâce au fuseau horaire du
+     téléphone ou de l'ordinateur (immédiat, sans connexion).
+  2. Puis elle confirme avec le pays de la connexion internet (adresse IP),
+     via un service gratuit sans inscription (get.geojs.io, et ipapi.co en
+     secours). Cela marche sur l'hébergement LWS sans rien installer.
+  3. Si ces services ne répondent pas, la page garde l'estimation du fuseau
+     horaire, ou affiche les euros par défaut.
+
+Limites à connaître :
+  - Un visiteur qui utilise un VPN peut voir la monnaie d'un autre pays.
+  - Le prix affiché est un prix de départ. La règle reste la même : le tarif
+    final dépend du lieu de facturation et il est confirmé dans le devis.
+  - Le pays détecté est ajouté au message WhatsApp du formulaire de devis,
+    ce qui vous aide à proposer le bon tarif.
+  - Pour la page « Confidentialité » : indiquez que l'adresse IP du visiteur
+    est envoyée à un service de géolocalisation pour choisir la monnaie.
+
+Pour tester vous-même :
+  ajoutez ?zone=fcfa ou ?zone=eur à la fin de l'adresse du site,
+  par exemple https://votre-domaine.com/?zone=eur
+
+Pour ajouter un pays à la zone FCFA (par exemple le Cameroun, qui utilise
+aussi le franc CFA) : dans js/main.js, cherchez « var UEMOA » et ajoutez le
+code du pays à deux lettres (Cameroun = 'CM', Gabon = 'GA', Congo = 'CG',
+Tchad = 'TD', Centrafrique = 'CF', Guinée équatoriale = 'GQ').
+
+
+5. METTRE LE SITE EN LIGNE SUR LWS
+----------------------------------
+Avant de commencer : il vous faut un hébergement LWS et un nom de domaine
+(ex. ouradigi.com) reliés à cet hébergement.
+
+ATTENTION : si WordPress est déjà installé à la racine de votre domaine,
+ne mélangez pas les deux. Choisissez soit la méthode A (ce site tel quel),
+soit la méthode C (reconstruire la page dans WordPress).
+
+Méthode A : avec le Gestionnaire de fichiers de LWS (la plus simple)
+  1. Connectez-vous sur https://panel.lws.fr avec vos identifiants LWS.
+  2. Cliquez sur votre nom de domaine, puis sur « Gestionnaire de fichiers »
+     (rubrique Fichiers).
+  3. Ouvrez le dossier « htdocs » (ou « www » / « public_html » selon l'offre).
+     C'est le dossier public de votre site.
+  4. S'il contient une page d'attente (index.html ou index.php de LWS),
+     supprimez-la ou renommez-la.
+  5. Envoyez (bouton « Téléverser » / « Upload ») index.html, 404.html et
+     .htaccess, puis les dossiers js, fonts et .well-known.
+  6. Créez un dossier nommé exactement « images » et envoyez-y tout le contenu
+     du dossier images (photos, vidéo, dossier avatars). Envoyez aussi, à côté
+     de index.html, les fichiers sitemap.xml, robots.txt, favicon.ico,
+     favicon.svg, apple-touch-icon.png, icon-192.png, icon-512.png et
+     site.webmanifest.
+  7. Ouvrez votre nom de domaine dans le navigateur : le site s'affiche.
+     (Si le domaine est tout neuf, l'affichage peut prendre quelques heures.)
+
+Méthode B : par FTP avec FileZilla (gratuit)
+  1. Dans le panel LWS, rubrique « Accès FTP », notez : serveur (hôte),
+     identifiant et mot de passe FTP. Ne les partagez avec personne.
+  2. Installez FileZilla (https://filezilla-project.org), puis renseignez
+     Hôte, Identifiant, Mot de passe, Port 21, et cliquez sur « Connexion rapide ».
+  3. À droite (le serveur), ouvrez « htdocs » (ou « www »).
+  4. Glissez depuis la gauche (votre ordinateur) tout le contenu du dossier
+     ouradigi-site (index.html, 404.html, .htaccess, images, js, fonts…).
+
+Méthode C : passer sur WordPress (Astra ou Kadence) plus tard
+  Cette page sert alors de modèle. Les couleurs à reprendre dans
+  Apparence > Personnaliser > Couleurs globales sont en haut de index.html
+  (bleu nuit #0B2545, bleu vif #1D4ED8, jaune #FFB703).
+  Polices : Poppins pour les titres, Inter pour le texte.
+  Le formulaire WhatsApp peut être collé dans un bloc « HTML personnalisé ».
+
+
+6. MODIFIER LES INFORMATIONS COURANTES
+--------------------------------------
+Ouvrez index.html avec un éditeur de texte (Bloc-notes, ou mieux, le logiciel
+gratuit Visual Studio Code). Utilisez Ctrl + F pour chercher, puis remplacez.
+
+- Numéro WhatsApp : cherchez 22898000493 (format sans + ni espaces) et
+  +228 98 00 04 93 (format affiché). Remplacez partout : dans index.html,
+  dans 404.html et dans js/main.js (ligne « var NUMERO_WHATSAPP »).
+- Prix : cherchez par exemple « 130 000 F ». Chaque prix est écrit deux fois
+  sur la même ligne : data-fcfa="..." (FCFA) et data-eur="..." (euros).
+  Modifiez les deux, ainsi que le texte affiché juste après.
+  Analyse de données : cherchez « 200 000 F » (formule complète, dès 600 €)
+  et « 50 000 F / mois » (suivi, 150 € / mois). Chacun apparaît 2 fois :
+  dans la carte du service et dans les Tarifs. Le prix en FCFA est aussi
+  écrit dans les données pour Google (cherchez "price": 200000).
+- Message WhatsApp du bouton « Demander une analyse » : cherchez
+  « Demander une analyse ». Le texte est dans le lien, après ?text= ,
+  encodé (%20 = espace, %0A = retour à la ligne). Le plus simple est de
+  demander la modification plutôt que de l'éditer à la main.
+- Réalisations : cherchez « RÉALISATIONS ». Pour ajouter un projet, copiez
+  un bloc <a class="carte projet ...> ... </a> et changez le lien, l'image,
+  le titre et la phrase.
+- Email : cherchez dg.ouradigi@gmail.com et remplacez partout (index.html
+  et .well-known/security.txt).
+- Témoignages : voir la partie 7 ci-dessous.
+- Vidéo : remplacez images/ouradigi-automatisation.mp4 par une nouvelle vidéo
+  portant exactement le même nom (format MP4, 720p conseillé, moins de 5 Mo).
+
+Après chaque modification : enregistrez, rouvrez index.html pour vérifier,
+puis renvoyez le fichier sur GitHub (voir partie 0 bis) ou sur LWS.
+
+Important pour la sécurité : n'ajoutez pas de <script> directement dans
+index.html (un outil de statistiques, un chat…). La protection
+Content-Security-Policy le bloquerait. Demandez d'abord : il suffit
+d'autoriser l'adresse de l'outil dans vercel.json et .htaccess.
+
+
+7. MODIFIER LES TÉMOIGNAGES
+---------------------------
+  1. Dans index.html, cherchez « TÉMOIGNAGES ».
+  2. Chaque avis est un bloc <figure class="avis"> ... </figure>. Il apparaît
+     DEUX fois (la 2e série fait tourner le défilement en boucle) : modifiez
+     les deux.
+  3. Changez le texte entre <blockquote> et </blockquote>, le nom entre
+     <b> et </b>, et l'activité entre <small> et </small>.
+  4. Photo : mettez la photo du client (carrée, environ 200 x 200 pixels)
+     dans images/avatars/ et changez le nom du fichier dans src="...".
+  5. Pour retirer un avis, supprimez ses deux blocs <figure class="avis">.
+
+8. ENCORE À FOURNIR POUR FINALISER
+---------------------------------
+- Le logo en PNG transparent (sans fond blanc) ou en SVG. Pour l'instant,
+  la page affiche une version redessinée simplifiée du symbole.
+- Le contenu exact du Pack Lancement d'entreprise.
+- Le prix de la boutique en ligne (affiché « Sur devis » pour l'instant).
+- Les pages Mentions légales et Confidentialité, recommandées avant le
+  lancement officiel.
+
+
+9. RÉFÉRENCEMENT : CE QUI EST DÉJÀ EN PLACE
+-------------------------------------------
+Le site est prêt pour Google. Rien n'a changé à l'écran : tout se passe dans
+le code et dans les fichiers ajoutés.
+  - Titre et description de la page, tels qu'ils s'affichent dans Google.
+  - Image et texte de partage (WhatsApp, Facebook, LinkedIn, X).
+  - Fiche « entreprise » lisible par Google : nom, Togo, téléphone, email,
+    services, et les questions de la FAQ.
+  - Adresse officielle de la page (balise « canonical »).
+  - Un seul grand titre (H1), une description sur chaque image.
+  - Icône d'onglet, sitemap.xml et robots.txt.
+
+L'ADRESSE DU SITE (à changer le jour où vous avez votre domaine)
+  Pour l'instant, l'adresse utilisée est :  https://ouradigi.vercel.app
+  Quand vous aurez votre domaine (par exemple https://ouradigi.com) :
+  1. Ouvrez index.html, sitemap.xml, robots.txt et .well-known/security.txt
+     avec Visual Studio Code.
+  2. Dans chacun, faites Ctrl + H (Rechercher et remplacer) :
+       chercher    : https://ouradigi.vercel.app
+       remplacer par : https://ouradigi.com   (votre vraie adresse, sans / à la fin)
+     Cliquez sur « Tout remplacer », puis enregistrez.
+  3. Dans sitemap.xml, mettez aussi la date du jour dans <lastmod>.
+  4. Renvoyez ces fichiers (sur GitHub pour Vercel, ou sur LWS).
+  5. Sur Vercel : Settings > Domains, ajoutez votre domaine et laissez
+     ouradigi.vercel.app rediriger vers lui, pour que Google ne voie
+     qu'une seule adresse.
+
+Sur Vercel (GitHub) : tous ces fichiers doivent être à la racine du dépôt,
+au même endroit que index.html. Après l'envoi, vérifiez que ces deux liens
+s'ouvrent : https://ouradigi.vercel.app/sitemap.xml et
+https://ouradigi.vercel.app/robots.txt
+
+Pour vérifier l'image de partage : collez l'adresse du site dans
+https://www.opengraph.xyz ou envoyez-la-vous sur WhatsApp.
+Pour vérifier la fiche entreprise : https://search.google.com/test/rich-results
+
+
+10. GOOGLE SEARCH CONSOLE (faire connaître le site à Google)
+------------------------------------------------------------
+C'est gratuit. Avec le compte Google dg.ouradigi@gmail.com :
+  1. Allez sur https://search.google.com/search-console
+  2. Choisissez « Préfixe de l'URL » et tapez l'adresse exacte du site
+     (https://ouradigi.vercel.app/ pour l'instant).
+  3. Validation : choisissez « Balise HTML ». Google donne une ligne comme
+     <meta name="google-site-verification" content="..."> .
+     Collez-la dans index.html juste sous la ligne <meta name="robots" ...>,
+     renvoyez index.html, attendez la mise en ligne, puis cliquez « Valider ».
+     (Avec votre propre domaine, la méthode « Domaine » par DNS chez LWS
+     est encore mieux : elle couvre aussi www.)
+  4. Menu de gauche > « Sitemaps » : tapez sitemap.xml et cliquez « Envoyer ».
+  5. En haut, collez l'adresse du site dans la barre « Inspecter » puis
+     cliquez « Demander une indexation ».
+  6. Comptez quelques jours à deux semaines pour apparaître. Revenez une fois
+     par semaine voir « Performances » : les mots tapés par vos visiteurs
+     vous donnent des idées d'articles.
+  Quand vous changez de domaine : refaites les étapes 2 à 5 avec la nouvelle
+  adresse.
+
+
+11. GOOGLE BUSINESS PROFILE (apparaître sur Google Maps)
+--------------------------------------------------------
+  1. Allez sur https://business.google.com et cliquez « Gérer maintenant ».
+  2. Nom : Ouradigi. Catégorie : « Concepteur de sites Web » (ajoutez ensuite
+     « Agence de marketing » ou « Service de montage vidéo » si proposées).
+  3. Vous n'avez pas de boutique ouverte au public : choisissez
+     « Je livre des produits et services à mes clients » et masquez l'adresse.
+     Zone desservie : Lomé, Togo, puis d'autres villes ou pays.
+  4. Téléphone : +228 98 00 04 93. Site : l'adresse du site.
+  5. Google vous demandera de valider (souvent une courte vidéo de votre
+     lieu de travail, ou un appel / SMS). Suivez ses instructions.
+  6. Ensuite : ajoutez le logo, 5 à 10 photos (réalisations, captures de
+     sites), la liste des services, et vos horaires.
+  7. Le plus important : demandez à chaque client satisfait de laisser un avis
+     Google (le profil donne un lien à envoyer sur WhatsApp).
+
+
+12. TROIS PREMIERS ARTICLES À ÉCRIRE
+-----------------------------------
+Les articles aident Google à vous trouver sur des recherches précises.
+Visez 600 à 1 000 mots, un exemple concret, et un bouton « Demander un
+devis » à la fin. Idées :
+  1. « Combien coûte un site internet au Togo en 2026 ? »
+     Vitrine, site pro, boutique : ce qui change le prix, ce qui est inclus,
+     les frais chaque année (domaine, hébergement).
+  2. « Assistant virtuel : 10 tâches à déléguer pour gagner 5 heures par semaine »
+     Emails, agenda, relances, saisie, rapports… et comment ça se passe à
+     distance.
+  3. « Automatiser ses relances de devis et factures : guide simple pour
+     les petites entreprises »
+     Avant / après, outils utilisés, exemple chiffré du temps gagné.
+Pour publier ces articles, il faut une page « Blog » : on peut l'ajouter au
+site plus tard (une page par article, chacune ajoutée dans sitemap.xml).

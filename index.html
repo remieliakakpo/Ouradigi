@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ouradigi | Création de sites web, montage vidéo et assistant virtuel</title>
+<meta name="description" content="Agence numérique basée au Togo, au service du monde entier : création de sites web, montage vidéo, assistant virtuel, automatisation et analyse de données. Devis rapide sur WhatsApp.">
+
+<!-- ===== RÉFÉRENCEMENT (SEO) =====
+     Adresse du site : https://ouradigi.vercel.app
+     Le jour où vous avez votre propre domaine, remplacez cette adresse partout
+     (ici, dans sitemap.xml et dans robots.txt). Voir LISEZ-MOI, partie 9. -->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://ouradigi.vercel.app/">
+<meta name="author" content="Ouradigi">
+<meta name="theme-color" content="#0B2545">
+
+<!-- Icônes -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Partage sur Facebook, WhatsApp, LinkedIn (Open Graph) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ouradigi">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://ouradigi.vercel.app/">
+<meta property="og:title" content="Ouradigi | Sites web, montage vidéo et assistant virtuel">
+<meta property="og:description" content="Basés au Togo, au service du monde entier. Nous créons votre site, montons vos vidéos, gérons vos tâches et automatisons ce qui vous fait perdre du temps.">
+<meta property="og:image" content="https://ouradigi.vercel.app/images/ouradigi-partage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ouradigi : sites, vidéos et assistant virtuel pour développer votre activité">
+
+<!-- Partage sur X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ouradigi | Sites web, montage vidéo et assistant virtuel">
+<meta name="twitter:description" content="Basés au Togo, au service du monde entier. Sites, vidéos, assistant virtuel et automatisation.">
+<meta name="twitter:image" content="https://ouradigi.vercel.app/images/ouradigi-partage.jpg">
+
+<!-- Données structurées pour Google (entreprise, services, FAQ) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ouradigi.vercel.app/#entreprise",
+      "name": "Ouradigi",
+      "description": "Agence de services numériques basée au Togo, au service de clients partout dans le monde : création de sites web, montage vidéo, assistant virtuel, automatisation et analyse de données.",
+      "url": "https://ouradigi.vercel.app/",
+      "logo": "https://ouradigi.vercel.app/icon-512.png",
+      "image": "https://ouradigi.vercel.app/images/ouradigi-partage.jpg",
+      "email": "dg.ouradigi@gmail.com",
+      "telephone": "+22898000493",
+      "address": { "@type": "PostalAddress", "addressCountry": "TG" },
+      "areaServed": "Worldwide",
+      "availableLanguage": ["fr"],
+      "priceRange": "$$",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+22898000493",
+        "email": "dg.ouradigi@gmail.com",
+        "url": "https://wa.me/22898000493",
+        "availableLanguage": ["fr"]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Ouradigi",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de sites web", "description": "Site vitrine, site professionnel et boutique en ligne, pensés pour le téléphone." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montage vidéo", "description": "Montage de vos vidéos et publication programmée sur vos réseaux." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Assistant virtuel", "description": "Emails, agenda, saisie et suivi clients, à l'heure ou au mois, avec rapports." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation", "description": "Connexion de vos outils pour automatiser relances, formulaires et rapports." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analyse de données : audit + tableau de bord", "description": "Nettoyage des données (Excel, Google Sheets, exports), tableau de bord des ventes, stocks et performances, rapport de recommandations en français." }, "priceSpecification": { "@type": "PriceSpecification", "price": 200000, "priceCurrency": "XOF" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pack Lancement d'entreprise" } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ouradigi.vercel.app/#site",
+      "url": "https://ouradigi.vercel.app/",
+      "name": "Ouradigi",
+      "inLanguage": "fr",
+      "publisher": { "@id": "https://ouradigi.vercel.app/#entreprise" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://ouradigi.vercel.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Travaillez-vous seulement au Togo ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Nous sommes basés au Togo et nous travaillons à distance avec des clients en Afrique, en Europe et ailleurs. Tout se fait en ligne : WhatsApp, email et visio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment sont fixés vos prix ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les prix affichés sont des prix de départ, dans la monnaie de votre région. Le tarif final dépend de votre projet et de votre lieu de facturation : il est toujours confirmé dans le devis, avant de commencer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faites-vous le tournage des vidéos ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Vous filmez avec votre téléphone ou votre caméra, et nous nous occupons du montage puis de la publication programmée sur vos réseaux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment fonctionne l'assistant virtuel ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous nous confiez des tâches (emails, agenda, saisie, suivi clients…), à l'heure ou au mois. Vous recevez un rapport de ce qui a été fait."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que veut dire « automatisation » ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous connectons vos outils pour que certaines tâches se fassent toutes seules : formulaires, relances, rapports. Une maintenance mensuelle permet de garder le tout en marche."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que contient l'analyse de données ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous nous envoyez vos fichiers (Excel, Google Sheets ou exports de votre logiciel). Nous les nettoyons, les analysons par produits, clients, périodes et rentabilité, puis nous vous livrons un tableau de bord clair et un rapport simple en français : ce qui marche, ce qui coûte, où investir. Le suivi mensuel garde le tableau de bord à jour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment vous contacter ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le plus simple est WhatsApp au +228 98 00 04 93. Vous pouvez aussi écrire à dg.ouradigi@gmail.com ou utiliser le formulaire « Demander un devis »."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Thème clair/sombre appliqué avant l'affichage (évite un flash) -->
+<script src="js/theme.js"></script>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Polices hébergées sur le site (plus rapide, aucun appel à Google) */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 600; font-display: swap; src: url(fonts/inter-latin.woff2) format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url(fonts/poppins-500.woff2) format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/poppins-600.woff2) format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/poppins-700.woff2) format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 600; font-display: swap; src: url(fonts/poppins-600-italic.woff2) format('woff2'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 700; font-display: swap; src: url(fonts/poppins-700-italic.woff2) format('woff2'); }
+/* =========================================================
+   1. COULEURS
+   À recopier dans Astra/Kadence > Personnaliser > Couleurs globales
+   ========================================================= */
+:root {
+  --bleu-nuit: #0B2545;
+  --bleu-vif: #1D4ED8;
+  --jaune: #FFB703;
+  --jaune-fonce: #F59E0B;
+  --whatsapp: #25D366;
+
+  --fond: #FFFFFF;
+  --fond-alt: #F4F6FA;
+  --cadre: #F7F9FC;            /* fond du grand cadre d'accueil */
+  --carte: #FFFFFF;
+  --texte: #1F2937;
+  --texte-doux: #5B6474;
+  --titre: #0B2545;
+  --bordure: #E3E8F0;
+  --accent: #1D4ED8;           /* liens, mots en italique */
+  --accent-doux: #E8EEFC;
+  --sur-jaune: #0B2545;
+  --nav-fond: rgba(255,255,255,.88);
+  --grille: rgba(11,37,69,.06);
+  --ombre: 0 10px 30px rgba(11,37,69,.08);
+  --ombre-forte: 0 18px 40px rgba(11,37,69,.14);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fond: #0B2545; --fond-alt: #081C36; --cadre: #0E2A4F; --carte: #11305A;
+    --texte: #E6ECF5; --texte-doux: #A9B6CA; --titre: #FFFFFF; --bordure: #1E3D69;
+    --accent: #FFB703; --accent-doux: #16386A;
+    --nav-fond: rgba(14,42,79,.88); --grille: rgba(255,255,255,.05);
+    --ombre: 0 10px 30px rgba(0,0,0,.35); --ombre-forte: 0 18px 40px rgba(0,0,0,.5);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fond: #0B2545; --fond-alt: #081C36; --cadre: #0E2A4F; --carte: #11305A;
+  --texte: #E6ECF5; --texte-doux: #A9B6CA; --titre: #FFFFFF; --bordure: #1E3D69;
+  --accent: #FFB703; --accent-doux: #16386A;
+  --nav-fond: rgba(14,42,79,.88); --grille: rgba(255,255,255,.05);
+  --ombre: 0 10px 30px rgba(0,0,0,.35); --ombre-forte: 0 18px 40px rgba(0,0,0,.5);
+  color-scheme: dark;
+}
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body {
+  margin: 0; background: var(--fond); color: var(--texte);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px; line-height: 1.6; overflow-x: hidden;
+  transition: background-color .3s, color .3s;
+}
+h1, h2, h3 { font-family: "Poppins", "Inter", sans-serif; color: var(--titre); line-height: 1.18; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 6.4vw, 3.6rem); font-weight: 700; letter-spacing: -.02em; }
+h2 { font-size: clamp(1.6rem, 4.6vw, 2.5rem); font-weight: 700; letter-spacing: -.01em; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+p { margin: 0 0 1em; }
+a { color: var(--accent); }
+img { max-width: 100%; display: block; }
+em.accent { font-style: italic; color: var(--accent); }
+
+.conteneur { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+.section { padding: 80px 0; }
+.section-alt { background: var(--fond-alt); }
+.section-tete { max-width: 660px; margin-bottom: 40px; }
+.section-tete.centre { margin-left: auto; margin-right: auto; text-align: center; }
+.section-tete p { color: var(--texte-doux); }
+.surtitre {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 600 .78rem/1 "Poppins", sans-serif; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--bleu-vif); margin-bottom: 14px;
+}
+:root[data-theme="dark"] .surtitre { color: var(--jaune); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .surtitre { color: var(--jaune); } }
+.surtitre::before { content: ""; width: 9px; height: 9px; background: var(--jaune); }
+
+/* Boutons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 24px; border-radius: 999px; border: 2px solid transparent;
+  font: 600 1rem/1 "Poppins", sans-serif; text-decoration: none; cursor: pointer;
+  transition: transform .2s, background-color .2s, border-color .2s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn .fleche { transition: transform .2s; }
+.btn:hover .fleche { transform: translateX(4px); }
+.btn:focus-visible, .ico-btn:focus-visible, summary:focus-visible { outline: 3px solid var(--jaune); outline-offset: 3px; }
+.btn-jaune { background: var(--jaune); color: var(--sur-jaune); box-shadow: 0 6px 18px rgba(255,183,3,.35); }
+.btn-jaune:hover { background: var(--jaune-fonce); }
+.btn-nuit { background: var(--bleu-nuit); color: #fff; }
+.btn-nuit:hover { background: #12345F; }
+.btn-contour { border-color: var(--bordure); color: var(--titre); background: var(--carte); }
+.btn-contour:hover { border-color: var(--bleu-vif); }
+.btn-whatsapp { background: var(--whatsapp); color: #06331A; }
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+/* =========================================================
+   3. MENU FLOTTANT (pilule)
+   ========================================================= */
+.entete { position: fixed; top: 12px; left: 0; right: 0; z-index: 50; padding: 0 12px; transition: top .3s; }
+.pilule {
+  max-width: 1080px; margin: 0 auto; height: 60px; padding: 0 8px 0 16px;
+  display: flex; align-items: center; gap: 8px;
+  background: var(--nav-fond); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--bordure); border-radius: 999px; box-shadow: var(--ombre);
+  position: relative; transition: box-shadow .3s, max-width .4s;
+}
+.entete.defile .pilule { box-shadow: var(--ombre-forte); max-width: 940px; }
+.logo { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; margin-right: auto; }
+.logo svg { width: 38px; height: 32px; color: var(--titre); }
+.logo .mot { font: 700 1.2rem/1 "Poppins", sans-serif; letter-spacing: .02em; }
+.logo .oura { color: var(--titre); }
+.logo .digi { color: var(--jaune); }
+
+.nav { display: none; position: relative; padding: 4px; border-radius: 999px; background: var(--fond-alt); }
+.nav a {
+  position: relative; z-index: 1; color: var(--texte); text-decoration: none;
+  font-weight: 500; font-size: .92rem; padding: 8px 14px; border-radius: 999px; transition: color .25s;
+}
+.nav a.actif { color: var(--sur-jaune); }
+.nav .indic {
+  position: absolute; top: 4px; bottom: 4px; left: 0; width: 0; border-radius: 999px;
+  background: var(--jaune); opacity: 0; transition: transform .35s cubic-bezier(.4,0,.2,1), width .35s cubic-bezier(.4,0,.2,1), opacity .2s;
+}
+.progression { position: absolute; left: 28px; right: 28px; bottom: -1px; height: 2px; border-radius: 2px; overflow: hidden; }
+.progression span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--bleu-vif), var(--jaune)); }
+
+.ico-btn {
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--bordure);
+  background: var(--carte); color: var(--titre); cursor: pointer; flex: none;
+  display: inline-flex; align-items: center; justify-content: center; transition: transform .3s;
+}
+.ico-btn svg { width: 19px; height: 19px; }
+.theme-btn:hover { transform: rotate(25deg); }
+.theme-btn .ico-soleil { display: none; }
+:root[data-theme="dark"] .theme-btn .ico-lune { display: none; }
+:root[data-theme="dark"] .theme-btn .ico-soleil { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-btn .ico-lune { display: none; }
+  :root:not([data-theme="light"]) .theme-btn .ico-soleil { display: block; }
+}
+.entete .btn-devis { display: none; padding: 11px 18px; font-size: .9rem; }
+
+.menu-mobile {
+  max-width: 1080px; margin: 8px auto 0; background: var(--carte); border: 1px solid var(--bordure);
+  border-radius: 20px; box-shadow: var(--ombre-forte); overflow: hidden;
+  display: none;
+}
+.menu-mobile.ouvert { display: block; animation: deroule .25s ease-out; }
+@keyframes deroule { from { opacity: 0; transform: translateY(-8px); } }
+.menu-mobile a { display: block; padding: 14px 20px; color: var(--texte); text-decoration: none; border-bottom: 1px solid var(--bordure); font-weight: 500; }
+.menu-mobile .btn { margin: 14px; display: flex; color: var(--sur-jaune); border-bottom: 0; }
+
+@media (min-width: 1100px) {
+  .nav { display: flex; }
+  .entete .btn-devis { display: inline-flex; }
+  .menu-btn, .menu-mobile, .menu-mobile.ouvert { display: none; }
+}
+
+/* =========================================================
+   4. ACCUEIL (grand cadre + éléments flottants)
+   ========================================================= */
+.hero { padding: 88px 12px 24px; }
+.cadre {
+  position: relative; overflow: hidden; max-width: 1180px; margin: 0 auto;
+  border-radius: 28px; border: 1px solid var(--bordure); background-color: var(--cadre);
+  background-image: radial-gradient(var(--grille) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  padding: 72px 16px 64px; text-align: center;
+}
+.cadre::after { /* halo doux */
+  content: ""; position: absolute; width: 520px; height: 520px; left: 50%; top: 40%;
+  transform: translate(-50%,-50%); border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, color-mix(in srgb, var(--jaune) 16%, transparent), transparent 65%);
+}
+.hero-contenu { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+.badge-hero {
+  display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px;
+  border: 1px solid var(--bordure); background: var(--carte); font-size: .85rem; color: var(--texte-doux); margin-bottom: 22px;
+}
+.badge-hero i { width: 8px; height: 8px; border-radius: 50%; background: var(--whatsapp); box-shadow: 0 0 0 0 rgba(37,211,102,.6); animation: pouls 2s infinite; }
+@keyframes pouls { 70% { box-shadow: 0 0 0 8px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
+
+.marque-logo { width: 64px; height: 64px; margin: 0 auto 22px; border-radius: 18px; background: var(--carte); border: 1px solid var(--bordure); box-shadow: var(--ombre); display: grid; place-items: center; }
+.marque-logo svg { width: 42px; height: 36px; color: var(--titre); }
+
+.souligne { position: relative; white-space: nowrap; }
+.souligne svg { position: absolute; left: 0; bottom: -.18em; width: 100%; height: .35em; overflow: visible; }
+.souligne path { stroke: var(--jaune); stroke-width: 6; fill: none; stroke-linecap: round; stroke-dasharray: 400; stroke-dashoffset: 400; animation: trace 1.2s .6s ease-out forwards; }
+@keyframes trace { to { stroke-dashoffset: 0; } }
+.hero p.sous { font-size: 1.1rem; color: var(--texte-doux); max-width: 36em; margin: 18px auto 0; }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+
+/* Éléments flottants autour du titre */
+.flottant { position: absolute; z-index: 1; animation: flotte 6s ease-in-out infinite; display: none; }
+.flottant.f2 { animation-delay: -2s; } .flottant.f3 { animation-delay: -4s; } .flottant.f4 { animation-delay: -1s; } .flottant.f5 { animation-delay: -3s; }
+@keyframes flotte { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-12px) rotate(var(--r,0deg)); } }
+
+.post-it {
+  --r: -4deg; top: 48px; left: 4%; width: 170px; padding: 22px 16px 16px; text-align: left;
+  background: #FFE29A; color: #3B2F0B; font: 600 italic .92rem/1.4 "Poppins", sans-serif;
+  box-shadow: 0 12px 24px rgba(11,37,69,.15); border-radius: 4px;
+}
+.post-it::before { content: ""; position: absolute; top: -6px; left: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--bleu-vif); transform: translateX(-50%); box-shadow: 0 2px 4px rgba(0,0,0,.3); }
+.mini-carte {
+  background: var(--carte); border: 1px solid var(--bordure); border-radius: 16px; box-shadow: var(--ombre-forte);
+  padding: 14px; text-align: left; font-size: .82rem;
+}
+.mini-carte b { font-family: "Poppins", sans-serif; color: var(--titre); }
+.planning { --r: 3deg; top: 40px; right: 4%; width: 210px; }
+.planning .tete { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-family: "Poppins", sans-serif; font-weight: 600; color: var(--titre); }
+.planning .ev { display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 10px; background: var(--fond-alt); margin-top: 6px; }
+.planning .ev .jour { font: 600 .7rem/1 "Poppins", sans-serif; padding: 6px 7px; border-radius: 6px; background: var(--accent-doux); color: var(--bleu-vif); }
+:root[data-theme="dark"] .planning .ev .jour { color: var(--jaune); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .planning .ev .jour { color: var(--jaune); } }
+.planning .ev small { display: block; color: var(--texte-doux); }
+.planning .ev .ok { margin-left: auto; width: 8px; height: 8px; border-radius: 50%; background: var(--whatsapp); }
+.etiquettes { --r: -2deg; bottom: 44px; left: 5%; width: 190px; }
+.puces { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.puce { padding: 5px 10px; border-radius: 999px; font-size: .75rem; font-weight: 600; background: var(--fond-alt); color: var(--texte); border: 1px solid var(--bordure); }
+.puce.on { background: var(--jaune); color: var(--sur-jaune); border-color: var(--jaune); }
+.puce.nuit { background: var(--bleu-nuit); color: #fff; border-color: var(--bleu-nuit); }
+.tuile { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--carte); border: 1px solid var(--bordure); box-shadow: var(--ombre); color: var(--bleu-vif); }
+:root[data-theme="dark"] .tuile { color: var(--jaune); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tuile { color: var(--jaune); } }
+.tuile svg { width: 22px; height: 22px; }
+.f4 { bottom: 70px; right: 9%; }
+.f5 { bottom: 140px; right: 4%; }
+.pixels-hero { position: absolute; top: 26px; left: 50%; margin-left: 180px; display: grid; grid-template-columns: repeat(3, 10px); gap: 4px; z-index: 1; }
+.pixels-hero i { width: 10px; height: 10px; animation: clignote 3s infinite; }
+.pixels-hero i:nth-child(2n) { animation-delay: -1.5s; }
+@keyframes clignote { 50% { opacity: .25; } }
+.b { background: var(--bleu-vif); } .j { background: var(--jaune); } .v { background: transparent !important; animation: none !important; }
+
+.cadre .flottant { display: none; }
+@media (min-width: 1100px) {
+  .cadre { padding: 110px 40px 100px; }
+  .cadre .flottant { display: block; }
+  .cadre .flottant.tuile, .cadre .flottant.pixels-hero { display: grid; }
+}
+
+
+/* --- Accueil : grille fine et points lumineux (inspiration ScholarFit) --- */
+.grille-lignes { position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(var(--grille) 1px, transparent 1px), linear-gradient(90deg, var(--grille) 1px, transparent 1px);
+  background-size: 56px 56px; background-position: center;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse at 50% 40%, #000 20%, transparent 75%); }
+.ciel { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.etoile { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: var(--jaune); box-shadow: 0 0 8px 2px color-mix(in srgb, var(--jaune) 60%, transparent); animation: scintille var(--t, 3s) ease-in-out infinite; animation-delay: var(--dl, 0s); opacity: .2; }
+.etoile.bl { background: var(--bleu-vif); box-shadow: 0 0 8px 2px rgba(29,78,216,.5); }
+@keyframes scintille { 50% { opacity: 1; transform: scale(1.4); } }
+.marque-logo { position: relative; }
+.orbite { position: absolute; inset: -12px; border-radius: 50%; border: 1px dashed color-mix(in srgb, var(--bleu-vif) 45%, transparent); animation: tourne 14s linear infinite; }
+.orbite i { position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; margin-left: -4px; background: var(--jaune); border-radius: 2px; box-shadow: 0 0 10px var(--jaune); }
+@keyframes tourne { to { transform: rotate(360deg); } }
+/* entrée en cascade du texte d'accueil */
+.hero-contenu > * { animation: entree .8s cubic-bezier(.2,.7,.2,1) both; }
+.hero-contenu > :nth-child(2) { animation-delay: .1s; } .hero-contenu > :nth-child(3) { animation-delay: .2s; }
+.hero-contenu > :nth-child(4) { animation-delay: .35s; } .hero-contenu > :nth-child(5) { animation-delay: .5s; } .hero-contenu > :nth-child(6) { animation-delay: .6s; }
+@keyframes entree { from { opacity: 0; transform: translateY(18px); filter: blur(4px); } }
+/* reflet qui passe sur les boutons jaunes */
+.btn-jaune, .btn-whatsapp, .btn-nuit { position: relative; overflow: hidden; }
+.btn-jaune::after, .btn-whatsapp::after, .btn-nuit::after { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent); transform: skewX(-20deg); transition: left .6s; }
+.btn-jaune:hover::after, .btn-whatsapp:hover::after, .btn-nuit:hover::after { left: 130%; }
+/* halo qui suit la souris sur les cartes */
+.carte::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--jaune) 14%, transparent), transparent 60%); }
+.carte:hover::before { opacity: 1; }
+.carte > * { position: relative; }
+.carte .badge { position: absolute; }
+/* bouton email */
+.contacts-directs { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn-mail { background: rgba(255,255,255,.55); color: var(--bleu-nuit); border-color: rgba(11,37,69,.15); }
+.btn-mail:hover { background: #fff; }
+/* petits soulignés animés sous les mots en italique des titres */
+h2 em.accent { background: linear-gradient(var(--jaune), var(--jaune)) no-repeat 0 92% / 0 3px; transition: background-size .9s .3s cubic-bezier(.2,.7,.2,1); padding-bottom: 2px; }
+.vu h2 em.accent, h2 em.accent.vu { background-size: 100% 3px; }
+
+/* =========================================================
+   5. BANDEAU DÉFILANT
+   ========================================================= */
+.defilant { overflow: hidden; padding: 26px 0; border-bottom: 1px solid var(--bordure); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.defilant .piste { display: flex; width: max-content; animation: defile 40s linear infinite; }
+.defilant:hover .piste { animation-play-state: paused; }
+.defilant span { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; white-space: nowrap; font: 600 italic 1.25rem/1 "Poppins", sans-serif; color: var(--texte-doux); }
+.defilant span::after { content: ""; width: 9px; height: 9px; background: var(--jaune); transform: rotate(45deg); }
+@keyframes defile { to { transform: translateX(-50%); } }
+
+/* =========================================================
+   6. LE CONSTAT (titre à gauche, liste numérotée à droite)
+   ========================================================= */
+.deux-col { display: grid; gap: 40px; }
+@media (min-width: 900px) { .deux-col { grid-template-columns: .9fr 1.1fr; gap: 72px; align-items: start; } .deux-col .colle { position: sticky; top: 120px; } }
+.deux-col .colle p { color: var(--texte-doux); }
+.liste-num { list-style: none; margin: 0; padding: 0; }
+.liste-num li { display: grid; grid-template-columns: 56px 1fr; gap: 8px; padding: 24px 0; border-top: 1px solid var(--bordure); }
+.liste-num li:last-child { border-bottom: 1px solid var(--bordure); }
+.liste-num .n { font: 600 italic 1.5rem/1 "Poppins", sans-serif; color: var(--jaune-fonce); }
+.liste-num h3 { margin-bottom: 4px; }
+.liste-num p { margin: 0; color: var(--texte-doux); }
+
+/* =========================================================
+   7. SERVICES
+   ========================================================= */
+.grille { display: grid; gap: 18px; }
+@media (min-width: 600px) { .grille-2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .grille-4 { grid-template-columns: repeat(4, 1fr); } }
+.carte {
+  position: relative; background: var(--carte); border: 1px solid var(--bordure); border-radius: 20px; padding: 26px;
+  display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.carte:hover { transform: translateY(-6px); box-shadow: var(--ombre-forte); }
+.pastille { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; flex: none; background: var(--accent-doux); color: var(--bleu-vif); margin-bottom: 18px; transition: transform .3s; }
+:root[data-theme="dark"] .pastille { color: #9DB8FF; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pastille { color: #9DB8FF; } }
+.carte:hover .pastille { transform: rotate(-8deg) scale(1.06); }
+.pastille.jaune { background: color-mix(in srgb, var(--jaune) 22%, transparent); color: var(--jaune-fonce); }
+.pastille svg { width: 24px; height: 24px; }
+.carte p { color: var(--texte-doux); font-size: .95rem; }
+.prix { margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--bordure); font-size: .9rem; color: var(--texte-doux); }
+.prix strong { font-family: "Poppins", sans-serif; color: var(--titre); font-size: 1.1rem; }
+.carte .lien { margin-top: 12px; font-weight: 600; text-decoration: none; font-size: .95rem; color: var(--bleu-vif); }
+:root[data-theme="dark"] .carte .lien { color: var(--jaune); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .carte .lien { color: var(--jaune); } }
+.carte.phare { border: 2px solid var(--jaune); }
+.badge { position: absolute; top: -13px; right: 18px; background: var(--jaune); color: var(--sur-jaune); font: 600 .75rem/1 "Poppins", sans-serif; padding: 7px 11px; border-radius: 999px; }
+
+.pack {
+  margin-top: 36px; border-radius: 24px; padding: 32px 24px; position: relative; overflow: hidden;
+  background: var(--bleu-nuit); color: #C4CEDD; display: grid; gap: 18px; align-items: center;
+}
+:root[data-theme="dark"] .pack { background: var(--carte); border: 1px solid var(--bordure); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pack { background: var(--carte); border: 1px solid var(--bordure); } }
+.pack h3 { color: #fff; font-size: 1.4rem; margin: 0 0 6px; }
+.pack p { margin: 0; }
+/* Offre Analyse de données (carte large + mini tableau de bord animé) */
+.carte-analyse { margin-top: 18px; display: grid; gap: 26px; align-items: center; border: 2px solid var(--bleu-vif); }
+:root[data-theme="dark"] .carte-analyse { border-color: var(--jaune); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .carte-analyse { border-color: var(--jaune); } }
+.carte-analyse .badge { right: auto; left: 22px; background: var(--bleu-vif); color: #fff; }
+.carte-analyse h3 { font-size: 1.35rem; margin-bottom: 6px; }
+.carte-analyse .points { list-style: none; padding: 0; margin: 14px 0 6px; display: grid; gap: 9px; }
+.carte-analyse .points li { position: relative; padding-left: 30px; font-size: .95rem; color: var(--texte); }
+.carte-analyse .points li::before { content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 6px; background: var(--jaune) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B2545' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center / 12px no-repeat; }
+.carte-analyse .pour { font-size: .9rem; color: var(--texte-doux); margin: 10px 0 0; }
+.carte-analyse .pour b { color: var(--titre); }
+.carte-analyse .prix { margin-top: 16px; }
+.carte-analyse .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 16px; }
+.carte-analyse .actions .lien { margin-top: 0; }
+@media (min-width: 900px) { .carte-analyse { grid-template-columns: 1.15fr 1fr; padding: 34px 36px; } }
+.tdb { border-radius: 18px; background: var(--fond-alt); border: 1px solid var(--bordure); padding: 16px; display: grid; gap: 12px; }
+.tdb-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tdb-kpi { background: var(--carte); border: 1px solid var(--bordure); border-radius: 12px; padding: 10px 12px; }
+.tdb-kpi small { display: block; font-size: .7rem; color: var(--texte-doux); }
+.tdb-kpi b { font: 600 1.05rem/1.3 "Poppins", sans-serif; color: var(--titre); }
+.tdb-kpi i { font-style: normal; font-size: .72rem; font-weight: 600; color: #16A34A; }
+.tdb-kpi i.bas { color: #DC2626; }
+.tdb-graph { background: var(--carte); border: 1px solid var(--bordure); border-radius: 12px; padding: 12px 12px 8px; }
+.tdb-graph small { font-size: .72rem; color: var(--texte-doux); }
+.tdb-barres { display: flex; align-items: flex-end; gap: 7px; height: 96px; margin-top: 8px; position: relative; }
+.tdb-barres i { flex: 1; border-radius: 5px 5px 0 0; background: var(--bleu-vif); height: var(--h); transform-origin: bottom; transform: scaleY(.1); transition: transform .9s cubic-bezier(.2,.8,.2,1); transition-delay: var(--dl, 0s); }
+.tdb-barres i.j { background: var(--jaune); }
+.vu .tdb-barres i { transform: scaleY(1); animation: respire 3.2s ease-in-out infinite alternate; animation-delay: calc(var(--dl, 0s) + 1s); }
+@keyframes respire { to { transform: scaleY(.82); } }
+.tdb-courbe { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.tdb-courbe path { fill: none; stroke: var(--jaune-fonce); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 320; stroke-dashoffset: 320; transition: stroke-dashoffset 1.6s ease-out .5s; }
+.vu .tdb-courbe path { stroke-dashoffset: 0; }
+.tdb-reco { display: flex; gap: 10px; align-items: center; background: color-mix(in srgb, var(--jaune) 18%, var(--carte)); border-radius: 12px; padding: 10px 12px; font-size: .82rem; color: var(--titre); }
+.tdb-reco span { width: 26px; height: 26px; flex: none; border-radius: 8px; display: grid; place-items: center; background: var(--jaune); color: var(--sur-jaune); font-weight: 700; }
+.tarifs .carte.large { grid-column: 1 / -1; border: 2px solid var(--bleu-vif); }
+:root[data-theme="dark"] .tarifs .carte.large { border-color: var(--jaune); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tarifs .carte.large { border-color: var(--jaune); } }
+.tarifs .carte.large .badge { right: auto; left: 22px; background: var(--bleu-vif); color: #fff; }
+.tarifs .carte.large .btn { justify-self: start; }
+.carte-analyse .prix strong { white-space: nowrap; }
+@media (max-width: 480px) { .tdb { padding: 12px; } .tdb-kpis { gap: 6px; } .tdb-kpi { padding: 8px; } .tdb-kpi b { font-size: .95rem; } }
+.tarifs .carte.large .note { font-size: .88rem; color: var(--texte-doux); margin: -10px 0 18px; }
+@media (min-width: 800px) { .tarifs .carte.large { display: grid; grid-template-columns: 1fr 1.3fr; column-gap: 36px; align-items: start; } .tarifs .carte.large .lignes { grid-column: 2; grid-row: 1 / span 3; margin-top: 0; } }
+.pack .deco { position: absolute; right: -30px; top: -30px; width: 160px; height: 160px; border-radius: 50%; border: 22px solid rgba(255,183,3,.18); }
+@media (min-width: 800px) { .pack { grid-template-columns: 1fr auto; padding: 40px 44px; } }
+
+/* =========================================================
+   8. POUR QUI
+   ========================================================= */
+.pour-qui { text-align: center; }
+.publics { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: 8px; font: 600 italic clamp(1.2rem, 3.4vw, 1.8rem)/1.5 "Poppins", sans-serif; color: var(--titre); }
+.publics span { transition: color .2s; }
+.publics span:hover { color: var(--jaune-fonce); }
+.publics .sep { color: var(--jaune); font-style: normal; }
+
+/* =========================================================
+   9. FONCTIONNEMENT (4 étapes illustrées)
+   ========================================================= */
+.etapes .illu { height: 130px; border-radius: 18px; background: var(--carte); border: 1px solid var(--bordure); display: grid; place-items: center; margin-bottom: 18px; overflow: hidden; }
+.etapes .num { font: 600 italic 2.6rem/1 "Poppins", sans-serif; color: var(--jaune-fonce); padding-top: 14px; border-top: 2px solid var(--titre); margin-bottom: 8px; }
+.etapes h3 { margin-bottom: 4px; }
+.etapes p { color: var(--texte-doux); font-size: .95rem; margin: 0; }
+.bulle { padding: 10px 14px; border-radius: 16px 16px 16px 4px; background: var(--whatsapp); color: #06331A; font-size: .85rem; font-weight: 600; }
+.bulle.r { background: var(--accent-doux); color: var(--titre); border-radius: 16px 16px 4px 16px; margin-left: 24px; margin-top: 6px; }
+.devis-illu { width: 120px; padding: 10px; border-radius: 10px; background: var(--fond-alt); border: 1px solid var(--bordure); }
+.devis-illu i { display: block; height: 6px; border-radius: 3px; background: var(--bordure); margin: 6px 0; }
+.devis-illu i.j { background: var(--jaune); width: 60%; }
+.barres { display: flex; align-items: flex-end; gap: 6px; height: 70px; }
+.barres i { width: 16px; border-radius: 4px 4px 0 0; background: var(--bleu-vif); animation: monte 2.4s ease-in-out infinite alternate; }
+.barres i:nth-child(2) { animation-delay: -.6s; background: var(--jaune); } .barres i:nth-child(3) { animation-delay: -1.2s; } .barres i:nth-child(4) { animation-delay: -1.8s; background: var(--jaune); }
+@keyframes monte { from { height: 25%; } to { height: 100%; } }
+.pixels-illu { display: grid; grid-template-columns: repeat(6, 12px); gap: 5px; }
+.pixels-illu i { width: 12px; height: 12px; border-radius: 3px; background: var(--bordure); }
+.pixels-illu i.b, .pixels-illu i.j { animation: clignote 2.5s infinite; }
+
+/* =========================================================
+   10. POURQUOI OURADIGI (bande sombre)
+   ========================================================= */
+.bande { background: var(--bleu-nuit); color: #C4CEDD; }
+:root[data-theme="dark"] .bande { background: #071A33; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .bande { background: #071A33; } }
+.bande h2, .bande h3 { color: #fff; }
+.bande .surtitre { color: var(--jaune); }
+.bande .section-tete p { color: #A9B6CA; }
+.bande em.accent { color: var(--jaune); }
+.atout { padding: 26px; border-radius: 20px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); transition: background .25s, transform .25s; }
+.atout:hover { background: rgba(255,255,255,.07); transform: translateY(-4px); }
+.atout .pastille { background: rgba(255,183,3,.14); color: var(--jaune); }
+.atout p { margin: 0; color: #A9B6CA; font-size: .95rem; }
+
+/* =========================================================
+   11. RÉALISATIONS
+   ========================================================= */
+.projet { padding: 0; overflow: hidden; text-decoration: none; color: inherit; }
+.projet .image { aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--bordure); background: var(--fond-alt); }
+.projet img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.projet:hover img { transform: scale(1.06); }
+.projet .infos { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+.tag { align-self: flex-start; font-size: .75rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: var(--accent-doux); color: var(--bleu-vif); margin-bottom: 10px; }
+:root[data-theme="dark"] .tag { color: #9DB8FF; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tag { color: #9DB8FF; } }
+.projet h3 { margin-bottom: 4px; }
+.projet p { color: var(--texte-doux); font-size: .93rem; margin: 0 0 12px; }
+.projet .url { margin-top: auto; font-size: .88rem; font-weight: 600; color: var(--bleu-vif); display: inline-flex; gap: 6px; align-items: center; }
+:root[data-theme="dark"] .projet .url { color: var(--jaune); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .projet .url { color: var(--jaune); } }
+
+/* =========================================================
+   12. TÉMOIGNAGES (emplacements)
+   ========================================================= */
+.defile-avis { overflow: hidden; padding: 12px 0 8px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.piste-avis { display: flex; gap: 18px; width: max-content; animation: defile 60s linear infinite; padding: 6px 9px; }
+.defile-avis:hover .piste-avis { animation-play-state: paused; }
+.avis { margin: 0; width: min(340px, 82vw); flex: none; display: flex; flex-direction: column; background: var(--carte); border: 1px solid var(--bordure); border-radius: 20px; padding: 24px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+.avis:hover { transform: translateY(-6px) rotate(-.5deg); box-shadow: var(--ombre-forte); border-color: var(--jaune); }
+.avis blockquote { margin: 6px 0 0; color: var(--texte); font-size: .98rem; }
+.note-avis { margin-top: 14px; font-size: .8rem; color: var(--texte-doux); text-align: center; }
+.temoin { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 18px; }
+.temoin .avatar { width: 48px; height: 48px; border-radius: 50%; flex: none; box-shadow: 0 0 0 3px var(--carte), 0 0 0 5px var(--jaune); }
+.temoin b { display: block; color: var(--titre); font-size: .95rem; }
+.temoin small { color: var(--texte-doux); }
+.guillemet { font: 700 3rem/1 "Poppins", serif; color: var(--jaune); height: 28px; }
+@media (min-width: 900px) { .grille-3 { grid-template-columns: repeat(3, 1fr); } }
+
+/* =========================================================
+   13. FAQ
+   ========================================================= */
+.faq { max-width: 780px; margin: 0 auto; }
+.faq details { border-bottom: 1px solid var(--bordure); }
+.faq details:first-of-type { border-top: 1px solid var(--bordure); }
+.faq summary { list-style: none; cursor: pointer; padding: 22px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; font: 600 1.05rem/1.4 "Poppins", sans-serif; color: var(--titre); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .plus { width: 30px; height: 30px; border-radius: 50%; flex: none; display: grid; place-items: center; background: var(--fond-alt); color: var(--jaune-fonce); font-size: 1.2rem; transition: transform .3s, background .3s; }
+.faq details[open] summary .plus { transform: rotate(45deg); background: var(--jaune); color: var(--sur-jaune); }
+.faq details p { color: var(--texte-doux); padding-bottom: 20px; margin: 0; animation: deroule .3s ease-out; }
+
+/* =========================================================
+   14. APPEL FINAL + PIED DE PAGE
+   ========================================================= */
+.cta { background: var(--jaune); color: var(--bleu-nuit); border-radius: 28px; padding: 56px 24px; text-align: center; position: relative; overflow: hidden; }
+.cta h2 { color: var(--bleu-nuit); }
+.cta p { max-width: 34em; margin: 0 auto 26px; }
+.cta .btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; position: relative; z-index: 1; }
+.cta .pixels-cta { position: absolute; display: grid; grid-template-columns: repeat(4, 16px); gap: 6px; opacity: .55; }
+.cta .pixels-cta i { width: 16px; height: 16px; }
+.cta .pixels-cta .b { background: var(--bleu-nuit); } .cta .pixels-cta .j { background: #fff; }
+.cta .p1 { top: 20px; right: 20px; display: none; }
+@media (min-width: 900px) { .cta .p1 { display: grid; } } .cta .p2 { bottom: 20px; right: 20px; }
+
+.pied { background: #071A33; color: #A9B6CA; padding: 56px 0 24px; font-size: .95rem; margin-top: 80px; }
+.pied .grille { gap: 32px; }
+@media (min-width: 800px) { .pied .grille { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; } }
+.pied h3 { color: #fff; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+.pied ul { list-style: none; padding: 0; margin: 0; }
+.pied li { margin-bottom: 4px; }
+.pied li a { display: inline-block; padding: 6px 0; }
+.pied a:focus-visible, .nav a:focus-visible, .menu-mobile a:focus-visible, .carte.projet:focus-visible { outline: 3px solid var(--jaune); outline-offset: 3px; border-radius: 6px; }
+.pied a { color: #A9B6CA; text-decoration: none; }
+.pied a:hover { color: var(--jaune); }
+.pied .logo .oura { color: #fff; }
+.pied .bas { border-top: 1px solid #16304F; margin-top: 36px; padding-top: 20px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-size: .85rem; }
+
+.wa-flottant {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60; width: 58px; height: 58px; border-radius: 50%;
+  background: var(--whatsapp); color: #fff; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  transition: transform .2s;
+}
+.wa-flottant::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--whatsapp); animation: onde 2.4s infinite; }
+@keyframes onde { from { transform: scale(1); opacity: .8; } to { transform: scale(1.6); opacity: 0; } }
+.wa-flottant:hover { transform: scale(1.08); }
+.wa-flottant svg { width: 30px; height: 30px; }
+
+
+/* =========================================================
+   16. TARIFS + FORMULAIRE
+   ========================================================= */
+.tarifs .lignes { list-style: none; margin: 6px 0 22px; padding: 0; }
+.tarifs .lignes li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--bordure); }
+.tarifs .lignes span { color: var(--texte-doux); }
+.tarifs .lignes b { font-family: "Poppins", sans-serif; color: var(--titre); text-align: right; }
+.tarifs .btn { margin-top: auto; align-self: flex-start; }
+.prix-change { animation: pop .35s ease-out; }
+@keyframes pop { from { opacity: 0; transform: translateY(6px); } }
+
+.cta { text-align: left; display: grid; gap: 28px; align-items: center; padding: 40px 20px; }
+@media (min-width: 900px) { .cta { grid-template-columns: 1fr 1fr; padding: 56px; gap: 48px; } }
+.cta-texte p { margin: 0 0 22px; max-width: 30em; }
+.formulaire { position: relative; z-index: 1; background: #fff; color: #1F2937; border-radius: 20px; padding: 22px; box-shadow: 0 20px 40px rgba(11,37,69,.18); display: grid; gap: 14px; }
+.formulaire label { display: grid; gap: 6px; font-weight: 600; font-size: .9rem; color: #0B2545; }
+.formulaire input, .formulaire select, .formulaire textarea {
+  width: 100%; font: 400 1rem/1.4 "Inter", sans-serif; padding: 12px 14px; border-radius: 12px;
+  border: 1px solid #D5DCE7; background: #F7F9FC; color: #1F2937; color-scheme: light;
+}
+.formulaire input:focus, .formulaire select:focus, .formulaire textarea:focus { outline: 2px solid #1D4ED8; outline-offset: 1px; background: #fff; }
+.formulaire .btn { width: 100%; }
+.erreur { margin: 0; color: #B42318; font-weight: 600; font-size: .9rem; }
+.champ-flash { animation: flash 1s ease-out; }
+@keyframes flash { 0% { box-shadow: 0 0 0 4px rgba(29,78,216,.45); } 100% { box-shadow: 0 0 0 0 rgba(29,78,216,0); } }
+
+
+/* =========================================================
+   17. VIDÉO MOTION DESIGN
+   ========================================================= */
+.video-motion { position: relative; border-radius: 24px; overflow: hidden; border: 1px solid var(--bordure); box-shadow: var(--ombre-forte); background: var(--cadre); aspect-ratio: 16 / 9; }
+.video-motion::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); }
+.video-motion video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.video-lecture { position: absolute; inset: 0; z-index: 2; border: 0; padding: 0; cursor: pointer; background: rgba(11,37,69,.08); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 10px; padding-bottom: 7%; transition: background .3s; }
+.video-lecture:hover { background: rgba(11,37,69,.16); }
+.video-lecture .rond { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: var(--jaune); color: var(--bleu-nuit); box-shadow: 0 10px 30px rgba(0,0,0,.25); animation: appel 2.6s ease-in-out infinite; transition: transform .25s; }
+.video-lecture .rond svg { width: 30px; height: 30px; margin-left: 4px; }
+.video-lecture:hover .rond { transform: scale(1.08); }
+.video-lecture .texte { font: 600 .95rem/1 "Poppins", sans-serif; color: var(--bleu-nuit); background: rgba(255,255,255,.92); padding: 9px 16px; border-radius: 999px; box-shadow: 0 4px 14px rgba(0,0,0,.12); }
+.video-lecture:focus-visible { outline: 3px solid var(--jaune); outline-offset: -6px; }
+.video-lecture[hidden] { display: none; }
+@keyframes appel { 0%,100% { box-shadow: 0 10px 30px rgba(0,0,0,.25), 0 0 0 0 rgba(255,183,3,.55); } 60% { box-shadow: 0 10px 30px rgba(0,0,0,.25), 0 0 0 16px rgba(255,183,3,0); } }
+@media (max-width: 600px) { .video-lecture .rond { width: 56px; height: 56px; } .video-lecture .rond svg { width: 22px; height: 22px; } .video-lecture .texte { font-size: .8rem; padding: 7px 12px; } .video-motion { border-radius: 16px; } }
+
+/* =========================================================
+   15. APPARITION AU DÉFILEMENT
+   ========================================================= */
+.js .revele { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+.js .revele.vu { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .js .revele { opacity: 1; transform: none; }
+  .souligne path { stroke-dashoffset: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Symbole du logo (réutilisé). Sur WordPress : remplacer par le vrai logo en PNG transparent ou SVG. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="symbole" viewBox="0 0 48 40">
+    <path d="M27 8h6a12 12 0 0 1 0 24h-6" fill="none" stroke="#FFB703" stroke-width="6"/>
+    <circle cx="17" cy="20" r="11" fill="none" stroke="#1D4ED8" stroke-width="6"/>
+    <path d="M6 30 C18 28 28 20 36 9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <rect x="40" y="1" width="4" height="4" fill="#1D4ED8"/><rect x="44" y="5" width="4" height="4" fill="#FFB703"/><rect x="40" y="9" width="4" height="4" fill="#1D4ED8"/>
+  </symbol>
+  <symbol id="ico-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></symbol>
+</svg>
+
+<!-- ===================== MENU FLOTTANT ===================== -->
+<header class="entete">
+  <div class="pilule">
+    <a href="#accueil" class="logo" aria-label="Ouradigi, accueil">
+      <svg aria-hidden="true"><use href="#symbole"/></svg>
+      <span class="mot"><span class="oura">OURA</span><span class="digi">DIGI</span></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <span class="indic" aria-hidden="true"></span>
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#fonctionnement">Fonctionnement</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="ico-btn theme-btn" type="button" aria-label="Changer de thème (clair ou sombre)" title="Mode clair / sombre">
+      <svg class="ico-lune" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      <svg class="ico-soleil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <a href="#contact" class="btn btn-jaune btn-devis">Demander un devis <span class="fleche">→</span></a>
+    <button class="ico-btn menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="progression" aria-hidden="true"><span></span></div>
+  </div>
+  <div class="menu-mobile" id="menu-mobile">
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#fonctionnement">Fonctionnement</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact" class="btn btn-jaune">Demander un devis</a>
+  </div>
+</header>
+
+<main>
+<!-- ===================== ACCUEIL ===================== -->
+<section class="hero" id="accueil">
+  <div class="cadre">
+    <div class="grille-lignes" aria-hidden="true"></div>
+    <div class="ciel" aria-hidden="true"></div>
+    <!-- Éléments décoratifs flottants (visibles sur grand écran) -->
+    <div class="flottant post-it" aria-hidden="true">Et si votre site trouvait des clients pendant que vous travaillez ?</div>
+    <div class="flottant f2 mini-carte planning" aria-hidden="true">
+      <div class="tete">Publications <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+      <div class="ev"><span class="jour">LUN</span><div><b>Vidéo promo</b><small>18h00</small></div><span class="ok"></span></div>
+      <div class="ev"><span class="jour">MER</span><div><b>Tutoriel</b><small>12h30</small></div><span class="ok"></span></div>
+      <div class="ev"><span class="jour">VEN</span><div><b>Témoignage</b><small>19h00</small></div><span class="ok"></span></div>
+    </div>
+    <div class="flottant f3 mini-carte etiquettes" aria-hidden="true">
+      <b>Vos besoins</b>
+      <div class="puces"><span class="puce on">Site web</span><span class="puce">Vidéo</span><span class="puce nuit">Assistant</span><span class="puce">Automatisation</span></div>
+    </div>
+    <div class="flottant f4 tuile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg></div>
+    <div class="flottant f5 tuile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div>
+    <div class="pixels-hero flottant" aria-hidden="true"><i class="b"></i><i class="v"></i><i class="j"></i><i class="v"></i><i class="j"></i><i class="b"></i></div>
+
+    <div class="hero-contenu">
+      <div class="badge-hero"><i></i> Basés au Togo, au service du monde entier</div>
+      <div class="marque-logo" aria-hidden="true"><svg><use href="#symbole"/></svg><span class="orbite"><i></i></span></div>
+      <h1>Sites, vidéos et assistant virtuel pour <em class="accent">développer</em> <span class="souligne">votre activité<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C50 2 150 2 198 7"/></svg></span></h1>
+      <p class="sous">Ouradigi crée votre site, monte vos vidéos, prend en charge vos tâches et automatise ce qui vous fait perdre du temps. <strong>Vous vous concentrez sur vos clients.</strong></p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-jaune">Demander un devis <span class="fleche">→</span></a>
+        <a href="https://wa.me/22898000493" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ico-wa"/></svg> Écrire sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BANDEAU DÉFILANT ===================== -->
+<div class="defilant" aria-hidden="true">
+  <div class="piste">
+    <span>Site vitrine</span><span>Montage vidéo</span><span>Assistant virtuel</span><span>Automatisation</span><span>Boutique en ligne</span><span>Publication programmée</span><span>Rapports réguliers</span><span>Lancement d'entreprise</span>
+    <span>Site vitrine</span><span>Montage vidéo</span><span>Assistant virtuel</span><span>Automatisation</span><span>Boutique en ligne</span><span>Publication programmée</span><span>Rapports réguliers</span><span>Lancement d'entreprise</span>
+  </div>
+</div>
+
+<!-- ===================== LE CONSTAT ===================== -->
+<section class="section" id="constat">
+  <div class="conteneur deux-col">
+    <div class="colle revele">
+      <div class="surtitre">Le constat</div>
+      <h2>Le numérique ne devrait pas vous prendre <em class="accent">tout votre temps.</em></h2>
+      <p>Vous savez faire votre métier. Le site, les vidéos, les messages et les tâches répétitives, c'est à nous de nous en occuper.</p>
+    </div>
+    <ol class="liste-num">
+      <li class="revele"><span class="n">01</span><div><h3>Pas de site, ou un site oublié</h3><p>Vos clients vous cherchent en ligne et ne trouvent rien de clair.</p></div></li>
+      <li class="revele" style="--d:.08s"><span class="n">02</span><div><h3>Des vidéos qui dorment dans le téléphone</h3><p>Vous filmez, mais le montage et la publication passent toujours après.</p></div></li>
+      <li class="revele" style="--d:.16s"><span class="n">03</span><div><h3>Des journées remplies de petites tâches</h3><p>Emails, relances, agenda, saisie : le temps file sans faire avancer l'essentiel.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== VIDÉO AUTOMATISATION ===================== -->
+<section class="section" id="video-automatisation" style="padding-top:0">
+  <div class="conteneur">
+    <div class="section-tete revele">
+      <div class="surtitre">Automatisation</div>
+      <h2>Vos tâches répétitives, <em class="accent">faites toutes seules.</em></h2>
+      <p>Relances, factures, emails, rendez-vous, rapports, RH : nous créons l'automatisation sur mesure qui vous fait gagner du temps.</p>
+    </div>
+    <div class="video-motion revele">
+      <video id="motion-ouradigi" playsinline preload="none" poster="images/ouradigi-automatisation-poster.jpg" aria-label="Vidéo : Ouradigi automatise vos tâches répétitives">
+        <source data-src="images/ouradigi-automatisation.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="video-lecture" id="motion-son" aria-label="Lire la vidéo avec le son"><span class="rond"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span><span class="texte">Regarder la vidéo</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section section-alt" id="services">
+  <div class="conteneur">
+    <div class="section-tete revele">
+      <div class="surtitre">Nos services</div>
+      <h2>Tout le numérique de votre entreprise, <em class="accent">au même endroit.</em></h2>
+      <p>Choisissez un service ou combinez-en plusieurs. Chaque projet commence par un échange pour comprendre vos besoins.</p>
+    </div>
+    <div class="grille grille-2 grille-4">
+      <article class="carte revele">
+        <span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/></svg></span>
+        <h3>Création de sites web</h3>
+        <p>Site vitrine, site professionnel ou boutique en ligne, rapide et lisible sur mobile.</p>
+        <div class="prix">À partir de <strong data-fcfa="130 000 F" data-eur="400 €">130 000 F</strong></div>
+        <a href="#tarifs" class="lien">Voir les formules →</a>
+      </article>
+      <article class="carte revele" style="--d:.08s">
+        <span class="pastille jaune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg></span>
+        <h3>Montage vidéo</h3>
+        <p>Vous filmez, nous montons vos vidéos et programmons leur publication sur vos réseaux.</p>
+        <div class="prix">À partir de <strong data-fcfa="10 000 F" data-eur="30 €">10 000 F</strong> / vidéo</div>
+        <a href="#tarifs" class="lien">Voir les packs →</a>
+      </article>
+      <article class="carte phare revele" style="--d:.16s">
+        <span class="badge">Offre phare</span>
+        <span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></span>
+        <h3>Assistant virtuel</h3>
+        <p>Emails, agenda, saisie, suivi clients : on gère vos tâches et vous recevez un rapport.</p>
+        <div class="prix">À partir de <strong data-fcfa="5 000 F" data-eur="20 €">5 000 F</strong> / heure</div>
+        <a href="#tarifs" class="lien">Voir les formules →</a>
+      </article>
+      <article class="carte revele" style="--d:.24s">
+        <span class="pastille jaune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+        <h3>Automatisation</h3>
+        <p>Formulaires, relances, rapports : on connecte vos outils pour supprimer les tâches répétitives.</p>
+        <div class="prix">À partir de <strong data-fcfa="50 000 F" data-eur="150 €">50 000 F</strong></div>
+        <a href="#tarifs" class="lien">Voir les formules →</a>
+      </article>
+    </div>
+
+    <article class="carte carte-analyse revele">
+      <span class="badge">Nouveau</span>
+      <div>
+        <span class="pastille jaune"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-7"/></svg></span>
+        <h3>Analyse de données : audit + tableau de bord</h3>
+        <p>Nous nettoyons vos données, les analysons et vous livrons un tableau de bord clair avec un rapport de recommandations concrètes (ce qui marche, ce qui coûte, où investir).</p>
+        <ul class="points">
+          <li>Nettoyage et organisation de vos fichiers (Excel, Google Sheets, exports de logiciels)</li>
+          <li>Tableaux de bord mis à jour : ventes, stocks, performances</li>
+          <li>Analyse par produits, clients, périodes et rentabilité</li>
+          <li>Un rapport simple, en français, avec des actions concrètes</li>
+        </ul>
+        <p class="pour"><b>Pour :</b> commerces, PME, cabinets, associations, créateurs de contenu.</p>
+        <div class="prix">Formule complète <strong data-fcfa="200 000 F" data-eur="dès 600 €">200 000 F</strong> · suivi <strong data-fcfa="50 000 F / mois" data-eur="150 € / mois">50 000 F / mois</strong></div>
+        <div class="actions">
+          <a href="https://wa.me/22898000493?text=Bonjour%20Ouradigi%2C%20je%20souhaite%20une%20analyse%20de%20mes%20donn%C3%A9es%20%28audit%20%2B%20tableau%20de%20bord%29.%0A%0AMon%20activit%C3%A9%20%3A%20%0AMes%20donn%C3%A9es%20sont%20dans%20%3A%20%28Excel%2C%20Google%20Sheets%2C%20logiciel%20de%20caisse%E2%80%A6%29" class="btn btn-jaune" target="_blank" rel="noopener noreferrer">Demander une analyse <span class="fleche">→</span></a>
+          <a href="#tarifs" class="lien">Voir les formules →</a>
+        </div>
+      </div>
+      <div class="tdb" aria-hidden="true">
+        <div class="tdb-kpis">
+          <div class="tdb-kpi"><small>Ventes du mois</small><b>+18 %</b> <i>▲</i></div>
+          <div class="tdb-kpi"><small>Marge</small><b>32 %</b> <i>▲</i></div>
+          <div class="tdb-kpi"><small>Ruptures</small><b>4</b> <i class="bas">▼</i></div>
+        </div>
+        <div class="tdb-graph">
+          <small>Ventes par mois</small>
+          <div class="tdb-barres">
+            <i style="--h:38%;--dl:.05s"></i><i class="j" style="--h:52%;--dl:.12s"></i><i style="--h:45%;--dl:.19s"></i><i style="--h:63%;--dl:.26s"></i><i class="j" style="--h:58%;--dl:.33s"></i><i style="--h:74%;--dl:.4s"></i><i style="--h:69%;--dl:.47s"></i><i class="j" style="--h:88%;--dl:.54s"></i>
+            <svg class="tdb-courbe" viewBox="0 0 200 96" preserveAspectRatio="none"><path d="M6 70 C 30 60, 45 50, 62 54 S 100 36, 118 34 S 160 22, 194 10"/></svg>
+          </div>
+        </div>
+        <div class="tdb-reco"><span>!</span>Le produit B coûte plus qu'il ne rapporte : à revoir.</div>
+      </div>
+    </article>
+
+    <div class="pack revele">
+      <span class="deco" aria-hidden="true"></span>
+      <div>
+        <h3>Pack Lancement d'entreprise</h3>
+        <p>Vous démarrez ? Les services essentiels pour lancer votre activité, réunis dans une seule offre.</p>
+      </div>
+      <a href="#contact" class="btn btn-jaune" data-service="Pack Lancement d'entreprise">Demander le pack <span class="fleche">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TARIFS =====================
+     Chaque prix est écrit en FCFA (data-fcfa) et en euros (data-eur).
+     La page affiche automatiquement la bonne monnaie selon le pays du visiteur (voir le script « Monnaie du visiteur » en bas). -->
+<section class="section" id="tarifs">
+  <div class="conteneur">
+    <div class="section-tete revele">
+      <div class="surtitre">Tarifs</div>
+      <h2>Des prix clairs, <em class="accent">sans surprise.</em></h2>
+      <p>Les prix de départ de chaque service. Le montant exact est confirmé dans votre devis.</p>
+    </div>
+    <div class="grille grille-2 tarifs">
+      <div class="carte revele">
+        <h3>Sites web</h3>
+        <ul class="lignes">
+          <li><span>Site vitrine</span><b data-fcfa="130 000 F" data-eur="dès 400 €">130 000 F</b></li>
+          <li><span>Site professionnel</span><b data-fcfa="250 000 F" data-eur="dès 750 €">250 000 F</b></li>
+          <li><span>Boutique en ligne</span><b data-fcfa="Sur devis" data-eur="Sur devis">Sur devis</b></li>
+        </ul>
+        <a href="#contact" class="btn btn-contour" data-service="Création de site web">Demander un devis</a>
+      </div>
+      <div class="carte revele" style="--d:.08s">
+        <h3>Montage vidéo</h3>
+        <ul class="lignes">
+          <li><span>À la vidéo</span><b data-fcfa="10 000 F" data-eur="30 à 70 €">10 000 F</b></li>
+          <li><span>Pack 8 vidéos / mois</span><b data-fcfa="50 000 F" data-eur="270 €">50 000 F</b></li>
+          <li><span>Pack 9 à 12 vidéos / mois</span><b data-fcfa="90 000 F" data-eur="360 €">90 000 F</b></li>
+        </ul>
+        <a href="#contact" class="btn btn-contour" data-service="Montage vidéo">Demander un devis</a>
+      </div>
+      <div class="carte phare revele">
+        <span class="badge">Offre phare</span>
+        <h3>Assistant virtuel</h3>
+        <ul class="lignes">
+          <li><span>Au mois</span><b data-fcfa="80 000 F / mois" data-eur="500 € / mois">80 000 F / mois</b></li>
+          <li><span>À l'heure</span><b data-fcfa="5 000 F / h" data-eur="20 € / h">5 000 F / h</b></li>
+          <li><span>Tâche ponctuelle</span><b data-fcfa="5 000 à 15 000 F" data-eur="15 à 40 €">5 000 à 15 000 F</b></li>
+        </ul>
+        <a href="#contact" class="btn btn-jaune" data-service="Assistant virtuel">Demander un devis</a>
+      </div>
+      <div class="carte revele" style="--d:.08s">
+        <h3>Automatisation</h3>
+        <ul class="lignes">
+          <li><span>Mise en place</span><b data-fcfa="dès 50 000 F" data-eur="dès 150 €">dès 50 000 F</b></li>
+          <li><span>Maintenance</span><b data-fcfa="15 000 F / mois" data-eur="50 € / mois">15 000 F / mois</b></li>
+        </ul>
+        <a href="#contact" class="btn btn-contour" data-service="Automatisation">Demander un devis</a>
+      </div>
+      <div class="carte large revele">
+        <span class="badge">Nouveau</span>
+        <h3>Analyse de données</h3>
+        <p class="note">Nettoyage de vos fichiers, tableau de bord clair et rapport de recommandations en français.</p>
+        <ul class="lignes">
+          <li><span>Audit + tableau de bord (formule complète)</span><b data-fcfa="200 000 F" data-eur="dès 600 €">200 000 F</b></li>
+          <li><span>Suivi et mise à jour du tableau de bord</span><b data-fcfa="50 000 F / mois" data-eur="150 € / mois">50 000 F / mois</b></li>
+        </ul>
+        <a href="https://wa.me/22898000493?text=Bonjour%20Ouradigi%2C%20je%20souhaite%20une%20analyse%20de%20mes%20donn%C3%A9es%20%28audit%20%2B%20tableau%20de%20bord%29.%0A%0AMon%20activit%C3%A9%20%3A%20%0AMes%20donn%C3%A9es%20sont%20dans%20%3A%20%28Excel%2C%20Google%20Sheets%2C%20logiciel%20de%20caisse%E2%80%A6%29" class="btn btn-jaune" target="_blank" rel="noopener noreferrer">Demander une analyse</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POUR QUI ===================== -->
+<section class="section pour-qui">
+  <div class="conteneur">
+    <div class="section-tete centre revele">
+      <div class="surtitre">Pour qui</div>
+      <h2>Pour celles et ceux qui ont une activité à faire grandir.</h2>
+    </div>
+    <div class="publics revele">
+      <span>Entrepreneurs</span><span class="sep">/</span><span>Commerçants</span><span class="sep">/</span><span>Indépendants</span><span class="sep">/</span><span>PME</span><span class="sep">/</span><span>Créateurs de contenu</span><span class="sep">/</span><span>Associations</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FONCTIONNEMENT ===================== -->
+<section class="section section-alt" id="fonctionnement">
+  <div class="conteneur">
+    <div class="section-tete revele">
+      <div class="surtitre">Fonctionnement</div>
+      <h2>Quatre étapes, et votre projet est <em class="accent">entre de bonnes mains.</em></h2>
+    </div>
+    <div class="grille grille-2 grille-4 etapes">
+      <div class="revele">
+        <div class="illu" aria-hidden="true"><div><div class="bulle">Bonjour, j'ai besoin d'un site</div><div class="bulle r">Avec plaisir !</div></div></div>
+        <div class="num">1</div><h3>On échange</h3><p>Sur WhatsApp ou via le formulaire, on fait le point sur votre besoin.</p>
+      </div>
+      <div class="revele" style="--d:.08s">
+        <div class="illu" aria-hidden="true"><div class="devis-illu"><i class="j"></i><i></i><i></i><i style="width:70%"></i></div></div>
+        <div class="num">2</div><h3>Devis clair</h3><p>Un prix adapté à votre projet, avec ce qui est inclus et les délais.</p>
+      </div>
+      <div class="revele" style="--d:.16s">
+        <div class="illu" aria-hidden="true"><div class="pixels-illu"><i></i><i class="b"></i><i></i><i class="j"></i><i></i><i class="b"></i><i class="j"></i><i></i><i class="b"></i><i></i><i class="j"></i><i></i><i></i><i class="j"></i><i></i><i class="b"></i><i></i><i class="j"></i></div></div>
+        <div class="num">3</div><h3>On réalise</h3><p>Site, montage ou tâches : on avance, vous validez à chaque étape.</p>
+      </div>
+      <div class="revele" style="--d:.24s">
+        <div class="illu" aria-hidden="true"><div class="barres"><i></i><i></i><i></i><i></i></div></div>
+        <div class="num">4</div><h3>Suivi et rapports</h3><p>On reste disponible, et vous savez toujours ce qui a été fait.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POURQUOI OURADIGI ===================== -->
+<section class="section bande">
+  <div class="conteneur">
+    <div class="section-tete revele">
+      <div class="surtitre">Pourquoi Ouradigi</div>
+      <h2>Pensé pour vous faire <em class="accent">gagner du temps.</em></h2>
+      <p>Une seule équipe pour votre présence en ligne et vos tâches du quotidien.</p>
+    </div>
+    <div class="grille grille-2 grille-4">
+      <div class="atout revele"><span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h3>Tarifs clairs</h3><p>Des prix affichés clairement, dans la monnaie de votre région, et confirmés dans le devis.</p></div>
+      <div class="atout revele" style="--d:.08s"><span class="pastille"><svg aria-hidden="true"><use href="#ico-wa"/></svg></span><h3>Joignable sur WhatsApp</h3><p>Vous écrivez comme vous en avez l'habitude, on vous répond au même endroit.</p></div>
+      <div class="atout revele" style="--d:.16s"><span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span><h3>Des rapports</h3><p>Pour l'assistant virtuel, vous recevez le détail de ce qui a été fait.</p></div>
+      <div class="atout revele" style="--d:.24s"><span class="pastille"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><h3>Pensé mobile</h3><p>Des sites rapides et lisibles sur téléphone, là où sont vos clients.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RÉALISATIONS ===================== -->
+<section class="section" id="realisations">
+  <div class="conteneur">
+    <div class="section-tete revele">
+      <div class="surtitre">Réalisations</div>
+      <h2>Quelques sites <em class="accent">mis en ligne.</em></h2>
+      <p>Cliquez pour visiter chaque site.</p>
+    </div>
+    <div class="grille grille-2">
+      <a class="carte projet revele" href="https://essenamavocats.com/" target="_blank" rel="noopener noreferrer">
+        <div class="image"><img src="images/essenam.jpg" alt="Page d'accueil du site Essenam Avocat" loading="lazy" width="800" height="500"></div>
+        <div class="infos"><span class="tag">Site web</span><h3>Essenam Avocat</h3><p>Site d'un cabinet d'avocats d'affaires et de mandataires en transactions immobilières.</p><span class="url">essenamavocats.com ↗</span></div>
+      </a>
+      <a class="carte projet revele" href="https://ellxewo.com/" target="_blank" rel="noopener noreferrer" style="--d:.08s">
+        <div class="image"><img src="images/ellxewo.jpg" alt="Page d'accueil du site Ellxewo" loading="lazy" width="800" height="500"></div>
+        <div class="infos"><span class="tag">Site web</span><h3>Ellxewo</h3><p>Site d'une solution de financement pour s'équiper, payer simplement et vivre pleinement.</p><span class="url">ellxewo.com ↗</span></div>
+      </a>
+      <a class="carte projet revele" href="https://novobat-ing.com/" target="_blank" rel="noopener noreferrer">
+        <div class="image"><img src="images/novobat.jpg" alt="Page d'accueil du site Novobat" loading="lazy" width="800" height="500"></div>
+        <div class="infos"><span class="tag">Site web</span><h3>Novobat</h3><p>Site d'une entreprise de bâtiment et travaux publics, des études à la réalisation.</p><span class="url">novobat-ing.com ↗</span></div>
+      </a>
+      <a class="carte projet revele" href="https://scholarfit-phi.vercel.app/" target="_blank" rel="noopener noreferrer" style="--d:.08s">
+        <div class="image"><img src="images/scholarfit.jpg" alt="Page d'accueil de l'application ScholarFit" loading="lazy" width="800" height="500"></div>
+        <div class="infos"><span class="tag">Application web</span><h3>ScholarFit</h3><p>Application qui compare un profil aux bourses d'études ouvertes dans le monde, en français et en anglais.</p><span class="url">scholarfit-phi.vercel.app ↗</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TÉMOIGNAGES =====================
+     Chaque avis apparaît 2 fois (la 2e série sert à faire tourner le défilement en boucle) : modifier les deux. -->
+<section class="section section-alt" id="temoignages">
+  <div class="conteneur">
+    <div class="section-tete revele">
+      <div class="surtitre">Témoignages</div>
+      <h2>Ils nous ont fait <em class="accent">confiance.</em></h2>
+      <p>Ce que nos clients disent de notre travail.</p>
+    </div>
+  </div>
+  <div class="defile-avis revele">
+    <div class="piste-avis">
+      <figure class="avis"><div class="guillemet" aria-hidden="true">“</div><blockquote>Notre site est enfin clair sur téléphone. Les clients nous trouvent et nous écrivent directement sur WhatsApp.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-1.svg" alt="" width="48" height="48"><span><b>Komlan D.</b><small>Gérant de restaurant, Lomé</small></span></figcaption></figure>
+      <figure class="avis"><div class="guillemet" aria-hidden="true">“</div><blockquote>Je filme mes nouveautés, Ouradigi s'occupe du montage et de la publication. Je gagne un temps précieux chaque semaine.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-2.svg" alt="" width="48" height="48"><span><b>Akossiwa M.</b><small>Créatrice de mode, Lomé</small></span></figcaption></figure>
+      <figure class="avis"><div class="guillemet" aria-hidden="true">“</div><blockquote>L'assistante gère mes emails et mon agenda. Le rapport de fin de semaine me permet de tout suivre sans stress.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-3.svg" alt="" width="48" height="48"><span><b>Essi A.</b><small>Consultante RH, Kara</small></span></figcaption></figure>
+      <figure class="avis"><div class="guillemet" aria-hidden="true">“</div><blockquote>Les relances de devis partent maintenant toutes seules. Plus aucun client oublié.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-4.svg" alt="" width="48" height="48"><span><b>Yao E.</b><small>Entrepreneur BTP, Kpalimé</small></span></figcaption></figure>
+      <figure class="avis"><div class="guillemet" aria-hidden="true">“</div><blockquote>Avec le pack lancement, j'ai démarré avec un site et des vidéos propres dès le premier mois.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-5.svg" alt="" width="48" height="48"><span><b>Afi K.</b><small>Pâtissière, Lomé</small></span></figcaption></figure>
+      <figure class="avis"><div class="guillemet" aria-hidden="true">“</div><blockquote>Travailler à distance avec l'équipe est très simple : échanges rapides et devis clair en euros.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-6.svg" alt="" width="48" height="48"><span><b>Kodjo T.</b><small>Coach sportif, Paris</small></span></figcaption></figure>
+      <figure class="avis" aria-hidden="true"><div class="guillemet" aria-hidden="true">“</div><blockquote>Notre site est enfin clair sur téléphone. Les clients nous trouvent et nous écrivent directement sur WhatsApp.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-1.svg" alt="" width="48" height="48"><span><b>Komlan D.</b><small>Gérant de restaurant, Lomé</small></span></figcaption></figure>
+      <figure class="avis" aria-hidden="true"><div class="guillemet" aria-hidden="true">“</div><blockquote>Je filme mes nouveautés, Ouradigi s'occupe du montage et de la publication. Je gagne un temps précieux chaque semaine.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-2.svg" alt="" width="48" height="48"><span><b>Akossiwa M.</b><small>Créatrice de mode, Lomé</small></span></figcaption></figure>
+      <figure class="avis" aria-hidden="true"><div class="guillemet" aria-hidden="true">“</div><blockquote>L'assistante gère mes emails et mon agenda. Le rapport de fin de semaine me permet de tout suivre sans stress.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-3.svg" alt="" width="48" height="48"><span><b>Essi A.</b><small>Consultante RH, Kara</small></span></figcaption></figure>
+      <figure class="avis" aria-hidden="true"><div class="guillemet" aria-hidden="true">“</div><blockquote>Les relances de devis partent maintenant toutes seules. Plus aucun client oublié.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-4.svg" alt="" width="48" height="48"><span><b>Yao E.</b><small>Entrepreneur BTP, Kpalimé</small></span></figcaption></figure>
+      <figure class="avis" aria-hidden="true"><div class="guillemet" aria-hidden="true">“</div><blockquote>Avec le pack lancement, j'ai démarré avec un site et des vidéos propres dès le premier mois.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-5.svg" alt="" width="48" height="48"><span><b>Afi K.</b><small>Pâtissière, Lomé</small></span></figcaption></figure>
+      <figure class="avis" aria-hidden="true"><div class="guillemet" aria-hidden="true">“</div><blockquote>Travailler à distance avec l'équipe est très simple : échanges rapides et devis clair en euros.</blockquote><figcaption class="temoin"><img class="avatar" loading="lazy" decoding="async" src="images/avatars/avatar-6.svg" alt="" width="48" height="48"><span><b>Kodjo T.</b><small>Coach sportif, Paris</small></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="conteneur">
+    <div class="section-tete centre revele">
+      <div class="surtitre">FAQ</div>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div class="faq revele">
+      <details><summary>Travaillez-vous seulement au Togo ?<span class="plus">+</span></summary><p>Non. Nous sommes basés au Togo et nous travaillons à distance avec des clients en Afrique, en Europe et ailleurs. Tout se fait en ligne : WhatsApp, email et visio.</p></details>
+      <details><summary>Comment sont fixés vos prix ?<span class="plus">+</span></summary><p>Les prix affichés sont des prix de départ, dans la monnaie de votre région. Le tarif final dépend de votre projet et de votre lieu de facturation : il est toujours confirmé dans le devis, avant de commencer.</p></details>
+      <details><summary>Faites-vous le tournage des vidéos ?<span class="plus">+</span></summary><p>Non. Vous filmez avec votre téléphone ou votre caméra, et nous nous occupons du montage puis de la publication programmée sur vos réseaux.</p></details>
+      <details><summary>Comment fonctionne l'assistant virtuel ?<span class="plus">+</span></summary><p>Vous nous confiez des tâches (emails, agenda, saisie, suivi clients…), à l'heure ou au mois. Vous recevez un rapport de ce qui a été fait.</p></details>
+      <details><summary>Que veut dire « automatisation » ?<span class="plus">+</span></summary><p>Nous connectons vos outils pour que certaines tâches se fassent toutes seules : formulaires, relances, rapports. Une maintenance mensuelle permet de garder le tout en marche.</p></details>
+      <details><summary>Que contient l'analyse de données ?<span class="plus">+</span></summary><p>Vous nous envoyez vos fichiers (Excel, Google Sheets ou exports de votre logiciel). Nous les nettoyons, les analysons par produits, clients, périodes et rentabilité, puis nous vous livrons un tableau de bord clair et un rapport simple en français : ce qui marche, ce qui coûte, où investir. Le suivi mensuel garde le tableau de bord à jour.</p></details>
+      <details><summary>Comment vous contacter ?<span class="plus">+</span></summary><p>Le plus simple est WhatsApp au +228 98 00 04 93. Vous pouvez aussi écrire à dg.ouradigi@gmail.com ou utiliser le formulaire « Demander un devis ».</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT / DEVIS ===================== -->
+<section id="contact" class="section" style="padding-bottom:0">
+  <div class="conteneur">
+    <div class="cta revele">
+      <div class="pixels-cta p1" aria-hidden="true"><i class="b"></i><i class="j"></i><i class="v"></i><i class="b"></i><i class="v"></i><i class="b"></i><i class="j"></i></div>
+      <div class="cta-texte">
+        <h2>Parlons de votre projet</h2>
+        <p>Remplissez ce petit formulaire : il ouvre WhatsApp avec votre demande déjà écrite. Vous n'avez plus qu'à l'envoyer.</p>
+        <div class="contacts-directs">
+          <a href="https://wa.me/22898000493" class="btn btn-nuit" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ico-wa"/></svg> +228 98 00 04 93</a>
+          <a href="mailto:dg.ouradigi@gmail.com?subject=Demande%20de%20devis" class="btn btn-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> dg.ouradigi@gmail.com</a>
+        </div>
+      </div>
+      <form class="formulaire" id="form-devis" novalidate>
+        <label><span>Votre nom <span aria-hidden="true">*</span></span><input type="text" name="nom" required maxlength="80" autocomplete="name" placeholder="Ex. : Koffi A."></label>
+        <label>Votre entreprise ou activité<input type="text" name="entreprise" maxlength="100" autocomplete="organization" placeholder="Facultatif"></label>
+        <label>Service souhaité
+          <select name="service" id="champ-service">
+            <option>Création de site web</option>
+            <option>Montage vidéo</option>
+            <option>Assistant virtuel</option>
+            <option>Automatisation</option>
+            <option>Analyse de données</option>
+            <option>Pack Lancement d'entreprise</option>
+            <option>Devenir associé</option>
+            <option>Autre demande</option>
+          </select>
+        </label>
+        <label>Votre besoin<textarea name="message" rows="3" maxlength="1000" placeholder="Décrivez votre projet en quelques mots"></textarea></label>
+        <p class="erreur" id="erreur-form" role="alert" hidden>Merci d'indiquer votre nom.</p>
+        <button type="submit" class="btn btn-whatsapp"><svg aria-hidden="true"><use href="#ico-wa"/></svg> Envoyer ma demande sur WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== PIED DE PAGE ===================== -->
+<footer class="pied">
+  <div class="conteneur">
+    <div class="grille">
+      <div>
+        <a href="#accueil" class="logo" aria-label="Ouradigi"><span class="mot"><span class="oura">OURA</span><span class="digi">DIGI</span></span></a>
+        <p style="margin-top:14px">Agence de services numériques basée au Togo, au service de clients partout dans le monde. Sites web, montage vidéo, assistant virtuel et automatisation.</p>
+      </div>
+      <div><h3>Services</h3><ul><li><a href="#services">Création de sites</a></li><li><a href="#services">Montage vidéo</a></li><li><a href="#services">Assistant virtuel</a></li><li><a href="#services">Automatisation</a></li></ul></div>
+      <div><h3>Ouradigi</h3><ul><li><a href="#tarifs">Tarifs</a></li><li><a href="#realisations">Réalisations</a></li><li><a href="#contact" data-service="Devenir associé">Devenir associé</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><a href="https://wa.me/22898000493" target="_blank" rel="noopener noreferrer">WhatsApp : +228 98 00 04 93</a></li><li><a href="mailto:dg.ouradigi@gmail.com">dg.ouradigi@gmail.com</a></li><li><a href="#contact">Formulaire de devis</a></li><li>Lomé, Togo · clients dans le monde entier</li></ul></div>
+    </div>
+    <div class="bas">
+      <span>© <span id="annee">2026</span> Ouradigi. Tous droits réservés.</span>
+      <span>Sites · Vidéos · Assistant virtuel · Automatisation</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/22898000493" class="wa-flottant" target="_blank" rel="noopener noreferrer" aria-label="Nous écrire sur WhatsApp"><svg aria-hidden="true"><use href="#ico-wa"/></svg></a>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
